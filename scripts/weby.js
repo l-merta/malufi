@@ -11,8 +11,9 @@ const webs = [
 renderWebs();
 function renderWebs() {
   for(let i = 0; i < webs.length; i++) {
-    const nWeb = document.createElement('div');
-    nWeb.classList = "web";
+    const nWeb = webCont.querySelector('.web').cloneNode(true);
+    nWeb.classList.remove("disabled");
+    nWeb.querySelector("img").src = webs[i];
     webCont.appendChild(nWeb, webCont.children[webCont.children.length]);
   }
 }

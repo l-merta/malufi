@@ -16,6 +16,10 @@ body * {
   box-sizing: border-box;
 }
 
+.disabled {
+  display: none !important;
+}
+
 /* header */
 header {
   background-color: rgba(255, 255, 255, 0.05);
@@ -109,7 +113,6 @@ main .slogan {
 
 /* weby */
 .weby {
-  background-color: whitesmoke;
   width: 100%;
   height: 24em;
 }
@@ -118,14 +121,22 @@ main .slogan {
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill;
-  margin-left: calc(50% - 18em);
+  margin-left: calc(50% - 17.5em);
+  padding: 1em;
   display: flex;
   gap: 2.5em;
   overflow: hidden;
 }
 .weby .cont .web {
-  background-color: orange;
   aspect-ratio: 16/9;
   height: 100%;
   border-radius: 1em;
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
+}
+.weby .cont .web img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
