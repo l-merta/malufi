@@ -48,7 +48,7 @@ header nav a {
   transition: all 0.12s;
   cursor: pointer;
 }
-header nav a :hover {
+header nav a:hover {
   background-color: rgba(99, 99, 99, 0.1);
 }
 header nav .spec {
@@ -97,7 +97,6 @@ main .slogan {
   position: relative;
   top: -160px;
 }
-
 .kontakt-mini .cont {
   background-color: rgb(235, 235, 235);
   width: 70%;
@@ -110,7 +109,23 @@ main .slogan {
 
 /* weby */
 .weby {
-  background-color: red;
+  background-color: whitesmoke;
   width: 100%;
-  height: 30em;
+  height: 24em;
+}
+.weby .cont {
+  height: 85%;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  margin-left: calc(50% - 18em);
+  display: flex;
+  gap: 2.5em;
+  overflow: hidden;
+}
+.weby .cont .web {
+  background-color: orange;
+  aspect-ratio: 16/9;
+  height: 100%;
+  border-radius: 1em;
 }/*# sourceMappingURL=main.css.map */
