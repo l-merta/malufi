@@ -4,12 +4,9 @@ const firstWhite = document.querySelector('main').scrollHeight - (10 * 16) - (6 
 window.addEventListener('scroll', recolorHeader);
 recolorHeader();
 function recolorHeader() {
-  if (window.pageYOffset > firstWhite) {
+  if (window.scrollY > firstWhite) {
     header.classList = "header-light";
   } else {
     header.classList = "header-dark";
   }
 }
-//document.addEventListener('resize', ()=>{sticky = header.offsetTop;});
-
-let test = 'test'; // test
