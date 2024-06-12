@@ -1,18 +1,18 @@
 // gallery.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.weby .cont .web');
+  let slides = document.querySelectorAll('.weby .cont .web');
   const dots = document.querySelectorAll('.dots .dot');
   let currentIndex = 0;
   let slideInterval;
 
+  showSlide(1);
   function showSlide(index) {
+    const odlevahele = index * 37.5; //width 32 + gap 5.5
     slides.forEach((slide, i) => {
-      //slide.style = `translateX(${(i - index) * 100}%)`;
-      slide.style = `left: ${(i - index) * 100}%`;
+      slides[i].style = "left: -"+odlevahele+"em;";
     });
     dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
     currentIndex = index;
   }
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function startSlideShow() {
-    slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 second(s)
   }
 
   function stopSlideShow() {
