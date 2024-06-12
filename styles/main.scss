@@ -1,6 +1,6 @@
 :root
 {
-  --c1: black;
+  --c1: red;
   --c2: white;
   --f1: "Poppins";
   --f2: "Oswald";
@@ -19,7 +19,6 @@ body *
 /* header */
 header
 {
-  color: var(--c2);
   background-color: rgba(255, 255, 255, 0.05);
   width: 100%;
   height: var(--hh);
@@ -36,11 +35,11 @@ header
 }
 .header-light
 {
-
+  color: var(--c1);
 }
 .header-dark
 {
-  
+  color: var(--c2);
 }
 header .name
 {
