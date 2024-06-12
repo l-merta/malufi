@@ -15,4 +15,4 @@ window.addEventListener('scroll', function() {
 });
 //document.addEventListener('resize', ()=>{sticky = header.offsetTop;});
 
-// zmena
+// novej koment
