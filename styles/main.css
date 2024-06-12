@@ -33,47 +33,40 @@ header {
   transition: color 0.25s;
   z-index: 100;
 }
-
-.header-light {
-  color: var(--c1);
-}
-
-.header-dark {
-  color: var(--c2);
-}
-
 header .name {
   font: 600 1.6em var(--f1);
   letter-spacing: 0.2em;
 }
-
 header nav {
   font: 700 1.1em var(--f1);
   display: flex;
   gap: 0.25em;
 }
-
 header nav a {
   border-radius: 0.25em;
   padding: 0.7em 1em;
   transition: all 0.12s;
   cursor: pointer;
 }
-
-header nav a:hover {
+header nav a :hover {
   background-color: rgba(99, 99, 99, 0.1);
 }
-
 header nav .spec {
   border: 2px solid var(--c2);
   margin-left: 0.8em;
   transition: border 0.25s;
 }
 
+.header-light {
+  color: var(--c1);
+}
 .header-light nav .spec {
   border-color: var(--c1);
 }
 
+.header-dark {
+  color: var(--c2);
+}
 .header-dark nav .spec {
   border-color: var(--c2);
 }
@@ -86,7 +79,6 @@ main {
   height: 75vh;
   padding: calc(var(--hh) + 2em) 0 0 20vw;
 }
-
 main .slogan {
   color: var(--c2);
   font: 600 3em var(--f2);

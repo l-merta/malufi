@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function calculateFirstWhite(mainElement) {
-    return mainElement.scrollHeight - (10 * 16) - (6 * 16);
+    return mainElement.scrollHeight - (10 * 16) - (3 * 16);
   }
 
   function handleScroll(headerElement, threshold) {
