@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --c1: red;
+  --c1: black;
   --c2: white;
   --f1: "Poppins";
   --f2: "Oswald";
@@ -68,6 +68,14 @@ header nav .spec {
   border: 2px solid var(--c2);
   margin-left: 0.8em;
   transition: border 0.25s;
+}
+
+.header-light nav .spec {
+  border-color: var(--c1);
+}
+
+.header-dark nav .spec {
+  border-color: var(--c2);
 }
 
 /* úvod */
