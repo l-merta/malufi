@@ -17,46 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleScroll(headerElement, threshold) {
     if (window.scrollY > threshold) {
-      headerElement.classList.add('scrolled');
-      headerElement.classList.remove('unscrolled');
+      headerElement.classList = "header-light";
     } else {
-      headerElement.classList.add('unscrolled');
-      headerElement.classList.remove('scrolled');
+      headerElement.classList = "header-dark";
     }
   }
 });
-
-
-
-
-// const header = document.querySelector('header');
-// const firstWhite = document.querySelector('main').scrollHeight - (10 * 16) - (6 * 16);
-// //console.log(firstWhite);
-
-// window.addEventListener('scroll', function() {
-//   console.log("scroll");
-//   console.log(window.pageYOffset, firstWhite);
-//   if (window.pageYOffset > firstWhite) {
-//     header.style = "color: var(--c1);";
-//     header.querySelector("nav .spec").style = "border-color: var(--c1);";
-//   } else {
-//     header.style = "color: var(--c2);";
-//     header.querySelector("nav .spec").style = "border-color: var(--c2);";
-//   }
-// });
-// //document.addEventListener('resize', ()=>{sticky = header.offsetTop;});
-
-// // novej koment
-
-const header = document.querySelector('header');
-const firstWhite = document.querySelector('main').scrollHeight - (10 * 16) - (6 * 16);
-
-window.addEventListener('scroll', recolorHeader);
-recolorHeader();
-function recolorHeader() {
-  if (window.scrollY > firstWhite) {
-    header.classList = "header-light";
-  } else {
-    header.classList = "header-dark";
-  }
-}
