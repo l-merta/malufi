@@ -14,3 +14,5 @@ window.addEventListener('scroll', function() {
   }
 });
 //document.addEventListener('resize', ()=>{sticky = header.offsetTop;});
+
+// zmena
