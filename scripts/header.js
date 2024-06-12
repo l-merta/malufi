@@ -11,3 +11,5 @@ function recolorHeader() {
   }
 }
 //document.addEventListener('resize', ()=>{sticky = header.offsetTop;});
+
+let test = 'test'; // test
