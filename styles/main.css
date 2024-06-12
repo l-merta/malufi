@@ -1,24 +1,23 @@
-:root
-{
+@charset "UTF-8";
+:root {
   --c1: black;
   --c2: white;
   --f1: "Poppins";
   --f2: "Oswald";
   --hh: 6em;
 }
-body
-{
+
+body {
   margin: 0;
   margin-bottom: 300px;
 }
-body *
-{
+
+body * {
   box-sizing: border-box;
 }
 
 /* header */
-header
-{
+header {
   color: var(--c2);
   background-color: rgba(255, 255, 255, 0.05);
   width: 100%;
@@ -30,59 +29,58 @@ header
   align-items: center;
   position: fixed;
   top: 0;
-  backdrop-filter: blur(10px);
-  transition: color .25s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: color 0.25s;
   z-index: 100;
 }
-header .name
-{
+
+header .name {
   font: 600 1.6em var(--f1);
   letter-spacing: 0.2em;
 }
-header nav
-{
+
+header nav {
   font: 700 1.1em var(--f1);
   display: flex;
   gap: 0.25em;
 }
-header nav a
-{
+
+header nav a {
   border-radius: 0.25em;
-  padding: 0.7em 1.0em;
-  transition: all .12s;
+  padding: 0.7em 1em;
+  transition: all 0.12s;
   cursor: pointer;
 }
-header nav a:hover
-{
+
+header nav a:hover {
   background-color: rgba(99, 99, 99, 0.1);
 }
-header nav .spec
-{
+
+header nav .spec {
   border: 2px solid var(--c2);
   margin-left: 0.8em;
-  transition: border .25s;
+  transition: border 0.25s;
 }
 
 /* úvod */
-main
-{
-  background: rgb(22,44,54);
-  background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
+main {
+  background: rgb(22, 44, 54);
+  background: linear-gradient(90deg, rgb(22, 44, 54) 0%, rgb(17, 29, 34) 27%, rgb(15, 24, 28) 69%, rgb(19, 25, 46) 100%);
   width: 100%;
   height: 75vh;
   padding: calc(var(--hh) + 2em) 0 0 20vw;
 }
-main .slogan
-{
+
+main .slogan {
   color: var(--c2);
-  font: 600 3.0em var(--f2);
+  font: 600 3em var(--f2);
   width: 26.5vw;
   text-transform: uppercase;
 }
 
 /* kontakt mini */
-.kontakt-mini
-{
+.kontakt-mini {
   /* background-color: rgba(255, 0, 0, 0.3); */
   width: 100%;
   height: 28em;
@@ -92,8 +90,8 @@ main .slogan
   position: relative;
   top: -160px;
 }
-.kontakt-mini .cont
-{
+
+.kontakt-mini .cont {
   background-color: rgb(235, 235, 235);
   width: 70%;
   height: 100%;
@@ -104,9 +102,8 @@ main .slogan
 }
 
 /* weby */
-.weby
-{
+.weby {
   background-color: red;
   width: 100%;
   height: 30em;
-}
+}/*# sourceMappingURL=main.css.map */
