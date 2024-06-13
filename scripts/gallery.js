@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
+      if(index == slides.length-1)
+        dirRight = false;
+      if(index == 0)
+        dirRight = true;
       showSlide(index);
       stopSlideShow();
       startSlideShow();
