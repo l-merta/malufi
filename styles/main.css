@@ -2,6 +2,7 @@
 :root {
   --c1: black;
   --c2: white;
+  --c3: rgb(6, 36, 75);
   --f1: "Poppins";
   --f2: "Oswald";
   --hh: 6em;
@@ -176,7 +177,7 @@ main .slogan {
   min-height: 100%;
   max-height: 100%;
   border-radius: 1em;
-  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.25);
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -213,14 +214,34 @@ main .slogan {
   text-align: center;
 }
 .sluzby .cont {
-  width: 70%;
+  width: 60em;
+  max-width: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 1.25em;
 }
 .sluzby .cont .sluzba {
-  background-color: gray;
-  min-width: 49%;
+  background-color: var(--c2);
+  min-width: 48%;
+  max-width: 48%;
   height: 12em;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
+}
+.sluzby .cont .sluzba span {
+  font: 600 1.2em var(--f1);
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+.sluzby .cont .sluzba span i {
+  color: var(--c3);
+  font-size: 1.8em;
+}
+.sluzby .cont .sluzba p {
+  font: 400 1em var(--f1);
+  margin: 0;
+  margin-top: 0.8em;
 }/*# sourceMappingURL=main.css.map */
