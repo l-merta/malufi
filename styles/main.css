@@ -95,7 +95,7 @@ main .slogan {
 .kontakt-mini {
   /* background-color: rgba(255, 0, 0, 0.3); */
   width: 100%;
-  height: 28em;
+  height: 10em;
   margin-bottom: -80px;
   display: flex;
   justify-content: center;
@@ -108,8 +108,44 @@ main .slogan {
   height: 100%;
   border-radius: 1em;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.kontakt-mini .cont .info {
+  width: 25%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.kontakt-mini .cont .info span {
+  font: 500 1.2em var(--f1);
+}
+.kontakt-mini .cont .info .iconCont {
+  color: var(--c2);
+  background-color: var(--c1);
+  opacity: 0.7;
+  aspect-ratio: 1/1;
+  height: 100%;
+  border-radius: 0.5em;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+.kontakt-mini .cont .info .iconCont i {
+  scale: 1.8;
+}
+.kontakt-mini .cont a {
+  color: var(--c2);
+  background-color: rgba(0, 0, 0, 0.7);
+  font: 600 1.2em var(--f1);
+  width: 25%;
+  height: 45%;
+  border-radius: 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* weby */
@@ -128,7 +164,6 @@ main .slogan {
   aspect-ratio: 16/9;
   min-width: 32em;
   border-radius: 1em;
-  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   left: 0;
   transition: all 0.12s;
@@ -138,6 +173,7 @@ main .slogan {
   min-height: 100%;
   max-height: 100%;
   border-radius: 1em;
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
