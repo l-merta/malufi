@@ -102,7 +102,7 @@ main .slogan {
   position: relative;
   top: -15vh;
 }
-.kontakt-mini .cont {
+.kontakt-mini div {
   background-color: rgb(235, 235, 235);
   width: 70%;
   height: 100%;
@@ -152,7 +152,7 @@ main .slogan {
 .weby {
   width: 100%;
 }
-.weby .cont {
+.weby .slides {
   width: 100%;
   padding: 1em;
   padding-left: calc(50% - 16em);
@@ -160,7 +160,7 @@ main .slogan {
   gap: 5.5em;
   overflow: hidden;
 }
-.weby .cont .web {
+.weby .slides .web {
   aspect-ratio: 16/9;
   min-width: 32em;
   border-radius: 1em;
@@ -168,7 +168,7 @@ main .slogan {
   left: 0;
   transition: all 0.4s;
 }
-.weby .cont .web img {
+.weby .slides .web img {
   width: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -177,4 +177,22 @@ main .slogan {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.weby .dots {
+  text-align: center;
+  bottom: 10px;
+  width: 100%;
+}
+.weby .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.weby .dot.active {
+  background-color: #717171;
 }/*# sourceMappingURL=main.css.map */

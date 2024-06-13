@@ -1,7 +1,7 @@
 // gallery.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  let slides = document.querySelectorAll('.weby .cont .web');
+  let slides = document.querySelectorAll('.weby .slides .web');
   const dots = document.querySelectorAll('.dots .dot');
   let currentIndex = 0;
   let dirRight = true;
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slides[i].style = "left: -"+odlevahele+"em;";
     });
     dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
     currentIndex = index;
   }
 
