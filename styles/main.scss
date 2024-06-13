@@ -93,13 +93,14 @@ main
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
   height: 75vh;
-  padding: calc(var(--hh) + 2em) 0 0 20vw;
+  padding: calc(var(--hh) + 5vh) 0 0 16vw;
 
   .slogan
   {
     color: var(--c2);
     font: 600 3.0em var(--f2);
-    width: 26.5vw;
+    width: 10.5em;
+    margin: 0;
     text-transform: uppercase;
   }
 }
@@ -114,7 +115,7 @@ main
   display: flex;
   justify-content: center;
   position: relative;
-  top: -160px;
+  top: -15vh;
 
   .cont
   {
@@ -147,6 +148,7 @@ main
 
     .web
     {
+      // background-color: red;
       aspect-ratio: 16/9;
       min-width: 32em;
       border-radius: 1em;
@@ -158,8 +160,11 @@ main
       img
       {
         width: 100%;
-        height: 100%;
+        min-height: 100%;
+        max-height: 100%;
         border-radius: 1em;
+        position: relative;
+        // bottom: -0.2em;
         object-fit: cover;
       }
     }
