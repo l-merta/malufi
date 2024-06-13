@@ -92,7 +92,7 @@ main
   background: rgb(22,44,54);
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
-  height: 80vh;
+  height: 95vh;
   padding: calc(var(--hh) + 5vh) 0 0 16vw;
 
   .slogan
@@ -180,14 +180,14 @@ main
 {
   // background-color: whitesmoke;
   width: 100%;
-  // height: 24em;
+  margin-bottom: 4em;
 
   .slides
   {
     // height: 85%;
     width: 100%;
     padding: 1em;
-    padding-left: calc(50% - 16em);
+    padding-left: calc(50% - 19em);
     display: flex;
     gap: 5.5em;
     overflow: hidden;
@@ -196,7 +196,7 @@ main
     {
       // background-color: red;
       aspect-ratio: 16/9;
-      min-width: 32em;
+      min-width: 38em;
       border-radius: 1em;
       position: relative;
       left: 0;
@@ -236,5 +236,36 @@ main
   
   .dot.active {
     background-color: #717171;
+  }
+}
+
+/* služby */
+.sluzby
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1
+  {
+    font: 300 2.0em var(--f1);
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .cont
+  {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.0em;
+
+    .sluzba
+    {
+      background-color: gray;
+      min-width: 49.0%;
+      height: 12em;
+    }
   }
 }

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   showSlide(1);
   function showSlide(index) {
-    const odlevahele = index * 37.5; //width 32 + gap 5.5
+    const odlevahele = index * 43.5; //width 38 + gap 5.5
     slides.forEach((slide, i) => {
       slides[i].style = "left: -"+odlevahele+"em;";
     });
