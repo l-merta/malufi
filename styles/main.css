@@ -10,7 +10,6 @@
 
 body {
   margin: 0;
-  margin-bottom: 300px;
 }
 
 body * {
@@ -19,6 +18,12 @@ body * {
 
 .disabled {
   display: none !important;
+}
+
+.sectionName {
+  font: 300 2em var(--f1);
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 /* header */
@@ -83,6 +88,7 @@ main {
   width: 100%;
   height: 95vh;
   padding: calc(var(--hh) + 5vh) 0 0 16vw;
+  position: relative;
 }
 main .slogan {
   color: var(--c2);
@@ -90,6 +96,49 @@ main .slogan {
   width: 10.5em;
   margin: 0;
   text-transform: uppercase;
+}
+main .aCont {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+main .aCont a {
+  color: var(--c1);
+  background: rgb(80, 104, 187);
+  background: linear-gradient(90deg, rgb(80, 104, 187) 0%, rgb(77, 150, 185) 100%);
+  font: 700 1.4em var(--f1);
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 4px solid none;
+  padding: 1.4em 1.8em;
+  border-radius: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main .aCont a span {
+  color: var(--c2);
+  font: 500 1em var(--f1);
+  padding: 0.5em 0.8em;
+  position: absolute;
+  top: -1.5em;
+  right: -2em;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+main .aCont a:hover {
+  color: var(--c2);
+  background: transparent;
+  border: 4px solid var(--c2);
+  padding: 1.3em 1.8em;
 }
 
 /* kontakt mini */
@@ -208,11 +257,6 @@ main .slogan {
   flex-direction: column;
   align-items: center;
 }
-.sluzby h1 {
-  font: 300 2em var(--f1);
-  margin-bottom: 1em;
-  text-align: center;
-}
 .sluzby .cont {
   width: 60em;
   max-width: 80%;
@@ -244,4 +288,47 @@ main .slogan {
   font: 400 1em var(--f1);
   margin: 0;
   margin-top: 0.8em;
+}
+
+/* postup */
+.postup {
+  background-color: rgb(209, 209, 209);
+  width: 100%;
+  height: 40em;
+  margin-top: 5em;
+}
+
+/* kontakt */
+.kontakt {
+  background: rgb(22, 44, 54);
+  background: linear-gradient(90deg, rgb(22, 44, 54) 0%, rgb(17, 29, 34) 27%, rgb(15, 24, 28) 69%, rgb(19, 25, 46) 100%);
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.kontakt .slogan {
+  color: var(--c2);
+  font: 300 3em var(--f1);
+}
+.kontakt .slogan span {
+  font-weight: 600;
+}
+.kontakt button {
+  font: 600 2em var(--f1);
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.5em 0.8em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+.kontakt .tel {
+  color: var(--c2);
+  font: 200 1.5em var(--f1);
+}
+.kontakt .tel .tel2 {
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */

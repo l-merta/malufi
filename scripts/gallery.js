@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function startSlideShow() {
-    slideInterval = setInterval(nextSlide, 2000); // Change slide every 3 second(s)
+    slideInterval = setInterval(nextSlide, 4000); // Change slide every 3 second(s)
   }
 
   function stopSlideShow() {
