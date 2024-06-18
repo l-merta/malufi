@@ -3,9 +3,12 @@
   --c1: black;
   --c2: white;
   --c3: rgb(6, 36, 75);
+  --c4: rgb(63, 131, 209);
+  --c5: rgb(20, 20, 20);
   --f1: "Poppins";
   --f2: "Oswald";
   --hh: 6em;
+  --fh: 3em;
 }
 
 body {
@@ -22,7 +25,7 @@ body * {
 
 .sectionName {
   font: 300 2em var(--f1);
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   text-align: center;
 }
 
@@ -64,7 +67,12 @@ header nav a:hover {
 header nav .spec {
   border: 2px solid var(--c2);
   margin-left: 0.8em;
-  transition: border 0.25s;
+  transition: all 0.3s;
+}
+header nav .spec:hover {
+  color: var(--c1);
+  background-color: var(--c4);
+  border: 2px solid transparent;
 }
 
 .header-light {
@@ -109,14 +117,13 @@ main .aCont {
 }
 main .aCont a {
   color: var(--c1);
-  background: rgb(80, 104, 187);
-  background: linear-gradient(90deg, rgb(80, 104, 187) 0%, rgb(77, 150, 185) 100%);
+  background: var(--c4);
   font: 700 1.4em var(--f1);
   width: -moz-fit-content;
   width: fit-content;
-  border: 4px solid none;
-  padding: 1.4em 1.8em;
-  border-radius: 0.8em;
+  border: 4px solid transparent;
+  padding: 0.8em 1.2em;
+  border-radius: 0.25em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,7 +145,6 @@ main .aCont a:hover {
   color: var(--c2);
   background: transparent;
   border: 4px solid var(--c2);
-  padding: 1.3em 1.8em;
 }
 
 /* kontakt mini */
@@ -203,6 +209,7 @@ main .aCont a:hover {
 /* weby */
 .weby {
   width: 100%;
+  height: 70vh;
   margin-bottom: 4em;
 }
 .weby .slides {
@@ -213,7 +220,8 @@ main .aCont a:hover {
   gap: 5.5em;
   overflow: hidden;
 }
-.weby .slides .web {
+.weby .slides .web,
+.weby .slides .edgeWeb {
   aspect-ratio: 16/9;
   min-width: 38em;
   border-radius: 1em;
@@ -221,7 +229,8 @@ main .aCont a:hover {
   left: 0;
   transition: all 0.4s;
 }
-.weby .slides .web img {
+.weby .slides .web img,
+.weby .slides .edgeWeb img {
   width: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -248,6 +257,10 @@ main .aCont a:hover {
 }
 .weby .dot.active {
   background-color: #717171;
+}
+.weby .dot-fake {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* služby */
@@ -303,12 +316,12 @@ main .aCont a:hover {
   background: rgb(22, 44, 54);
   background: linear-gradient(90deg, rgb(22, 44, 54) 0%, rgb(17, 29, 34) 27%, rgb(15, 24, 28) 69%, rgb(19, 25, 46) 100%);
   width: 100%;
-  height: 70vh;
+  height: calc(100vh - var(--fh));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 2em;
 }
 .kontakt .slogan {
   color: var(--c2);
@@ -318,12 +331,25 @@ main .aCont a:hover {
   font-weight: 600;
 }
 .kontakt button {
-  font: 600 2em var(--f1);
-  border: none;
-  border-radius: 0.2em;
-  padding: 0.5em 0.8em;
-  margin-top: 1em;
+  color: var(--c2);
+  background: transparent;
+  font: 600 1.2em var(--f1);
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 3px solid var(--c2);
+  padding: 0.8em 1.2em;
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.kontakt button:hover {
+  color: var(--c1);
+  background: var(--c4);
+  border-color: transparent;
 }
 .kontakt .tel {
   color: var(--c2);
@@ -331,4 +357,15 @@ main .aCont a:hover {
 }
 .kontakt .tel .tel2 {
   font-weight: 500;
+}
+
+footer {
+  color: gray;
+  background-color: var(--c5);
+  font: 400 1em var(--f1);
+  width: 100%;
+  height: var(--fh);
+  padding: 0 5vh;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

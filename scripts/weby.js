@@ -14,19 +14,35 @@ renderWebs();
 renderDots();
 
 function renderWebs() {
+  //web na začátek
+  const nWebStart = slides.querySelector('.webDef').cloneNode(true);
+  nWebStart.classList = "web edgeWeb";
+  nWebStart.querySelector("img").src = webs[webs.length-1];
+  slides.appendChild(nWebStart, slides.children[1]);
+  ///
   for(let i = 0; i < webs.length; i++) {
     const nWeb = slides.querySelector('.webDef').cloneNode(true);
     nWeb.classList = "web";
     nWeb.querySelector("img").src = webs[i];
     slides.appendChild(nWeb, slides.children[slides.children.length]);
   }
+  ///web na konec
+  const nWebEnd = slides.querySelector('.webDef').cloneNode(true);
+  nWebEnd.classList = "web edgeWeb";
+  nWebEnd.querySelector("img").src = webs[0];
+  slides.appendChild(nWebEnd, slides.children[slides.children.length]);
 }
 
 function renderDots() {
+  const dot = document.createElement('span');
+  dot.className = 'dot dot-fake';
+  dot.setAttribute('data-index', `${0}`);
+  dots.appendChild(dot);
+  ///
   for (let i = 0; i < webs.length; i++) {
     const dot = document.createElement('span');
     dot.className = 'dot';
-    dot.setAttribute('data-index', `${i}`);
+    dot.setAttribute('data-index', `${i+1}`);
     dots.appendChild(dot);
   }
 }

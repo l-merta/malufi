@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   let slides = document.querySelectorAll('.weby .slides .web');
   const dots = document.querySelectorAll('.dots .dot');
-  let currentIndex = 0;
+  let currentIndex = 1;
   let dirRight = true;
   let slideInterval;
 
@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
       slides[i].style = "left: -"+odlevahele+"em;";
     });
     dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
+    if(index != slides.length)
+      dots[index].classList.add('active');
     currentIndex = index;
   }
 
@@ -22,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //currentIndex = (currentIndex + 1) % slides.length; -- bylo předtim
     if(dirRight) {
       currentIndex++;
-      if(currentIndex == slides.length - 1)
+      if(currentIndex == slides.length-2)
         dirRight = false;
     }
     else {
       currentIndex--;
-      if(currentIndex == 0)
+      if(currentIndex == 1)
         dirRight = true;
     }
     showSlide(currentIndex);
@@ -43,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-      if(index == slides.length-1)
+      if(index == slides.length-2)
         dirRight = false;
-      if(index == 0)
+      if(index == 1)
         dirRight = true;
       showSlide(index);
       stopSlideShow();

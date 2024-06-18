@@ -3,9 +3,12 @@
   --c1: black;
   --c2: white;
   --c3: rgb(6, 36, 75);
+  --c4: rgb(63, 131, 209);
+  --c5: rgb(20, 20, 20);
   --f1: "Poppins";
   --f2: "Oswald";
   --hh: 6em;
+  --fh: 3em;
 }
 body
 {
@@ -23,7 +26,7 @@ body *
 .sectionName
 {
   font: 300 2.0em var(--f1);
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   text-align: center;
 }
 
@@ -70,7 +73,14 @@ header
     {
       border: 2px solid var(--c2);
       margin-left: 0.8em;
-      transition: border .25s;
+      transition: all .3s;
+    }
+    .spec:hover
+    {
+      color: var(--c1);
+      background-color: var(--c4);
+      border: 2px solid transparent;
+      //padding: 1.3em 1.8em;
     }
   }
 }
@@ -125,13 +135,14 @@ main
     a
     {
       color: var(--c1);
-      background: rgb(80,104,187);
-      background: linear-gradient(90deg, rgba(80,104,187,1) 0%, rgba(77,150,185,1) 100%);
+      //background: rgba(80, 103, 187, 0);
+      //background: linear-gradient(90deg, rgba(80,104,187,1) 0%, rgba(77,150,185,1) 100%);
+      background: var(--c4);
       font: 700 1.4em var(--f1);
       width: fit-content;
-      border: 4px solid none;
-      padding: 1.4em 1.8em;
-      border-radius: 0.8em;
+      border: 4px solid transparent;
+      padding: 0.8em 1.2em;
+      border-radius: 0.25em;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -156,7 +167,7 @@ main
       color: var(--c2);
       background: transparent;
       border: 4px solid var(--c2);
-      padding: 1.3em 1.8em;
+      //padding: 1.3em 1.8em;
     }
   }
   
@@ -235,21 +246,23 @@ main
 /* weby */
 .weby
 {
-  // background-color: whitesmoke;
   width: 100%;
+  height: 70vh;
   margin-bottom: 4em;
 
   .slides
   {
     // height: 85%;
     width: 100%;
+    //margin-top: 8vh;
     padding: 1em;
     padding-left: calc(50% - 19em);
     display: flex;
     gap: 5.5em;
     overflow: hidden;
 
-    .web
+    .web,
+    .edgeWeb
     {
       // background-color: red;
       aspect-ratio: 16/9;
@@ -273,14 +286,15 @@ main
     }
   }
   
-  .dots {
+  .dots 
+  {
     text-align: center;
     //position: absolute;
     bottom: 10px;
     width: 100%;
   }
-  
-  .dot {
+  .dot 
+  {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -290,9 +304,14 @@ main
     display: inline-block;
     transition: background-color 0.6s ease;
   }
-  
-  .dot.active {
+  .dot.active 
+  {
     background-color: #717171;
+  }
+  .dot-fake
+  {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -363,12 +382,12 @@ main
   background: rgb(22,44,54);
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
-  height: 70vh;
+  height: calc(100vh - var(--fh));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.0em;
+  gap: 2.0em;
 
   .slogan
   {
@@ -382,12 +401,27 @@ main
   }
   button
   {
-    font: 600 2.0em var(--f1);
-    border: none;
-    border-radius: 0.2em;
-    padding: 0.5em 0.8em;
-    margin-top: 1em;
-    cursor: pointer;
+    color: var(--c2);
+      //background: rgba(80, 103, 187, 0);
+      //background: linear-gradient(90deg, rgba(80,104,187,1) 0%, rgba(77,150,185,1) 100%);
+      background: transparent;
+      font: 600 1.2em var(--f1);
+      width: fit-content;
+      border: 3px solid var(--c2);
+      padding: 0.8em 1.2em;
+      border-radius: 0.25em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      transition: all .3s;
+  }
+  button:hover
+  {
+    color: var(--c1);
+    background: var(--c4);
+    border-color: transparent;
   }
   .tel
   {
@@ -399,4 +433,16 @@ main
       font-weight: 500;
     }
   }
+}
+
+footer
+{
+  color: gray;
+  background-color: var(--c5);
+  font: 400 1.0em var(--f1);
+  width: 100%;
+  height: var(--fh);
+  padding: 0 5vh;
+  display: flex;
+  align-items: center;
 }
