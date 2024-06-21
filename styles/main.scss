@@ -30,6 +30,20 @@ body *
   text-align: center;
 }
 
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 95vh;
+  // background-color: #b61924;
+  // background-image: url("");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: 50% 50%;
+  background: rgb(22,44,54);
+  background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
+  z-index: 0;
+}
+
 /* header */
 header
 {
@@ -106,12 +120,14 @@ header
 /* úvod */
 main
 {
-  background: rgb(22,44,54);
-  background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
+  // background: rgb(22,44,54);
+  // background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
   height: 95vh;
   padding: calc(var(--hh) + 5vh) 0 0 16vw;
   position: relative;
+  pointer-events: none;
+  overflow-y: hidden;
 
   .slogan
   {
@@ -120,6 +136,7 @@ main
     width: 10.5em;
     margin: 0;
     text-transform: uppercase;
+    z-index: 10;
   }
   .aCont
   {
@@ -149,6 +166,7 @@ main
       position: relative;
       cursor: pointer;
       transition: all .3s;
+      pointer-events: all;
 
       span
       {
