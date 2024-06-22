@@ -43,6 +43,15 @@ body *
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   z-index: 0;
 }
+#particles-js2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(22,44,54);
+  background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
+  //z-index: 0;
+}
 
 /* header */
 header
@@ -401,6 +410,7 @@ main
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
   height: calc(100vh - var(--fh));
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -411,6 +421,8 @@ main
   {
     color: var(--c2);
     font: 300 3.0em var(--f1);
+    pointer-events: none;
+    z-index: 1;
 
     span
     {
@@ -420,20 +432,21 @@ main
   button
   {
     color: var(--c2);
-      //background: rgba(80, 103, 187, 0);
-      //background: linear-gradient(90deg, rgba(80,104,187,1) 0%, rgba(77,150,185,1) 100%);
-      background: transparent;
-      font: 600 1.2em var(--f1);
-      width: fit-content;
-      border: 3px solid var(--c2);
-      padding: 0.8em 1.2em;
-      border-radius: 0.25em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      cursor: pointer;
-      transition: all .3s;
+    //background: rgba(80, 103, 187, 0);
+    //background: linear-gradient(90deg, rgba(80,104,187,1) 0%, rgba(77,150,185,1) 100%);
+    background: transparent;
+    font: 600 1.2em var(--f1);
+    width: fit-content;
+    border: 3px solid var(--c2);
+    padding: 0.8em 1.2em;
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+    z-index: 1;
   }
   button:hover
   {
@@ -445,10 +458,13 @@ main
   {
     color: var(--c2);
     font: 200 1.5em var(--f1);
+    pointer-events: none;
+    z-index: 1;
 
     .tel2
     {
       font-weight: 500;
+      pointer-events: all;
     }
   }
 }
