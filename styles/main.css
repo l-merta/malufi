@@ -169,42 +169,41 @@ main .aCont a:hover {
   position: relative;
   top: -15vh;
 }
-.kontakt-mini div {
+.kontakt-mini .cont {
   background-color: rgb(235, 235, 235);
-  width: 70%;
+  width: 80%;
   height: 100%;
   border-radius: 1em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.kontakt-mini div .info {
-  width: 25%;
+.kontakt-mini .cont .info {
   height: 45%;
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 1.5em !important;
 }
-.kontakt-mini div .info span {
+.kontakt-mini .cont .info span {
   font: 600 1.4em var(--f1);
 }
-.kontakt-mini div .info .iconCont {
+.kontakt-mini .cont .info .iconCont {
   color: var(--c2);
   background-color: var(--c1);
   opacity: 0.7;
   aspect-ratio: 1/1 !important;
-  width: 5em;
-  height: 5em;
+  width: 5em !important;
+  height: 5em !important;
   border-radius: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.kontakt-mini div .info .iconCont i {
+.kontakt-mini .cont .info .iconCont i {
   scale: 1.8;
 }
-.kontakt-mini div a {
+.kontakt-mini .cont a {
   color: var(--c2);
   background-color: rgba(0, 0, 0, 0.7);
   font: 600 1.2em var(--f1);
@@ -221,7 +220,7 @@ main .aCont a:hover {
 .weby {
   width: 100%;
   height: 70vh;
-  margin-bottom: 4em;
+  margin-bottom: 10em;
 }
 .weby .slides {
   width: 100%;
@@ -379,4 +378,20 @@ footer {
   padding: 0 5vh;
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .kontakt-mini {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .kontakt-mini .cont {
+    width: 50%;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 2em;
+  }
 }/*# sourceMappingURL=main.css.map */
