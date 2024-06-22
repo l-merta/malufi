@@ -11,6 +11,10 @@
   --fh: 3em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -27,6 +31,11 @@ body * {
   font: 300 2em var(--f1);
   margin-bottom: 3em;
   text-align: center;
+}
+
+.anchor {
+  position: relative;
+  top: -7em;
 }
 
 #particles-js {
@@ -65,8 +74,10 @@ header {
   z-index: 100;
 }
 header .name {
+  color: inherit;
   font: 600 1.6em var(--f1);
   letter-spacing: 0.2em;
+  text-decoration: none;
 }
 header nav {
   font: 700 1.1em var(--f1);
@@ -74,9 +85,11 @@ header nav {
   gap: 0.25em;
 }
 header nav a {
+  color: inherit;
   border-radius: 0.25em;
   padding: 0.7em 1em;
   transition: all 0.12s;
+  text-decoration: none;
   cursor: pointer;
 }
 header nav a:hover {
