@@ -315,10 +315,46 @@ main .aCont a:hover {
 
 /* postup */
 .postup {
-  background-color: rgb(209, 209, 209);
+  margin-top: 7em;
+  margin-bottom: 5em;
+}
+.postup .cont {
   width: 100%;
   height: 40em;
-  margin-top: 5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  --bod-width: 20em;
+  --bod-height: 10em;
+  --bod-indent: 2em;
+}
+.postup .cont .lineCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.postup .cont .lineCont .line {
+  background-color: gray;
+  width: 0.2em;
+  height: 100%;
+  border-radius: 1em;
+}
+.postup .cont .bod {
+  background-color: gray;
+  width: var(--bod-width);
+  height: var(--bod-height);
+}
+.postup .cont .bod-left {
+  margin-right: calc(var(--bod-width) + var(--bod-indent));
+}
+.postup .cont .bod-right {
+  margin-left: calc(var(--bod-width) + var(--bod-indent));
 }
 
 /* kontakt */
