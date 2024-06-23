@@ -5,6 +5,7 @@
   --c3: rgb(6, 36, 75);
   --c4: rgb(63, 131, 209);
   --c5: rgb(20, 20, 20);
+  --c6: rgba(63, 131, 209, 0.3);
   --f1: "Poppins";
   --f2: "Oswald";
   --hh: 6em;
@@ -336,19 +337,40 @@ main
       border-radius: 1em;
       position: relative;
       left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
       transition: all .4s;
       
-      img
+      .img-back
       {
         width: 100%;
         min-height: 100%;
         max-height: 100%;
-        border-radius: 1em;
+        border-radius: 1.0em;
         box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.25);
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         // bottom: -0.2em;
-        object-fit: cover;
+        //object-fit: cover;
       }
+      .img-front
+      {
+        aspect-ratio: 16/9;
+        width: 95%;
+        border-radius: 0.5em;
+        position: absolute;
+        bottom: 0;
+        object-fit: cover;
+        transition: all .12s;
+      }
+    }
+    .web:hover .img-front
+    {
+      width: 105%;
     }
   }
   
