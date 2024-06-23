@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
       class: ["header-dark", "header-light"]
     }
   ];
-  console.log(colorChange[0].height);
 
   window.addEventListener('scroll', () => {
     //handleScroll(header, firstWhite);
