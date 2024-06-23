@@ -383,6 +383,7 @@ main
       border-radius: 0.5em;
       padding: 2em;
       box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.03);
+      transition: all .2s;
 
       span
       {
@@ -405,6 +406,13 @@ main
         margin-top: 1.2em;
       }
     }
+    .sluzba:hover
+    {
+      color: var(--c2);
+      background-color: var(--c3);
+      border: none;
+      box-shadow: 0px 0px 30px 0px rgba(6, 36, 75, 0.7);
+    }
   }
 }
 
@@ -425,9 +433,9 @@ main
     align-items: center;
     gap: 1em;
     
-    --bod-width: 20em;
-    --bod-height: 10em;
-    --bod-indent: 2em;
+    --bod-width: 17em;
+    --bod-height: 9em;
+    --bod-indent: 10em;
 
     .lineCont
     {
@@ -441,17 +449,36 @@ main
       
       .line
       {
-        background-color: gray;
+        background-color: rgba(128, 128, 128, 0.5);
         width: 0.2em;
         height: 100%;
         border-radius: 1em;
+
+        .innerLine
+        {
+          background-color: var(--c3);
+          width: 100%;
+          height: 50%;
+        }
       }
     }
     .bod
     {
-      background-color: gray;
       width: var(--bod-width);
       height: var(--bod-height);
+      
+      .nadpis
+      {
+        font: 600 2.5em var(--f1);
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+      }
+      p
+      {
+        font: 300 1.2em var(--f1);
+        margin: 0.5em 0;
+      }
     }
     .bod-left
     {
