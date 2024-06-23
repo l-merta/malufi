@@ -458,7 +458,7 @@ main
     {
       color: var(--c2);
       background-color: var(--c3);
-      border: none;
+      border: 1px solid transparent;
       box-shadow: 0px 0px 40px 0px rgba(6, 36, 75, 0.8);
     }
   }
