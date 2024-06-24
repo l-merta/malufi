@@ -403,7 +403,7 @@ main .aCont a:hover {
   align-items: center;
   gap: 1em;
   --bod-width: 17em;
-  --bod-height: 9em;
+  --bod-height: 20em;
   --bod-indent: 10em;
 }
 .postup .cont .lineCont {
