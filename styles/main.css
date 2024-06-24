@@ -396,14 +396,12 @@ main .aCont a:hover {
 }
 .postup .cont {
   width: 100%;
-  height: 40em;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  --bod-width: 17em;
-  --bod-height: 20em;
+  --bod-width: 24%;
   --bod-indent: 10em;
 }
 .postup .cont .lineCont {
@@ -436,6 +434,7 @@ main .aCont a:hover {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  white-space: nowrap;
 }
 .postup .cont .bod p {
   font: 300 1.2em var(--f1);
