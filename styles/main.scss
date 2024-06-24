@@ -174,11 +174,21 @@ main
   .slogan
   {
     color: var(--c2);
-    font: 600 2.8em var(--f2);
-    width: 35.0vw;
+    font: 600 4rem var(--f2);
+    width: 50.0vw;
     margin: 0;
     text-transform: uppercase;
     z-index: 10;
+  }
+  .podslogan{
+    color: var(--c2);
+    font: 400 1.5rem var(--f2);
+    letter-spacing: 0.5rem;
+    width: 50.0vw;
+    margin: 0;
+    text-transform: uppercase;
+    z-index: 10;
+    margin-top: 2em;
   }
   .aCont
   {
