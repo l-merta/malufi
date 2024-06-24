@@ -177,18 +177,29 @@ main
     font: 600 4rem var(--f2);
     width: 50.0vw;
     margin: 0;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     z-index: 10;
+    margin-top: -.2em;
   }
   .podslogan{
+    // color: var(--c2);
+    // font: 400 1.5rem var(--f2);
+    // //font: 300 3.0em var(--f1);
+    // letter-spacing: 0.5rem;
+    // width: 50.0vw;
+    // margin: 0;
+    // //text-transform: uppercase;
+    // z-index: 10;
+    // margin-top: 2em;
+
     color: var(--c2);
-    font: 400 1.5rem var(--f2);
-    letter-spacing: 0.5rem;
+    font: 300 3.0em var(--f1);
     width: 50.0vw;
     margin: 0;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     z-index: 10;
-    margin-top: 2em;
+    //line-height: 1rem;
+    margin-top: 1em;
   }
   .aCont
   {
@@ -390,6 +401,7 @@ main
     //position: absolute;
     bottom: 10px;
     width: 100%;
+    margin-top: 2em;
   }
   .dot 
   {
