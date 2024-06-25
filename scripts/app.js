@@ -272,10 +272,10 @@ particlesJS('particles-js-bg',
   {
     "particles": {
       "number": {
-        "value": 20,
+        "value": 8,
         "density": {
           "enable": true,
-          "value_area": 800
+          "value_area": 200
         }
       },
       "color": {
