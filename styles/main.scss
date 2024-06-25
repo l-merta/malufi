@@ -80,6 +80,14 @@ body *
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   //z-index: 0;
 }
+#particles-js-bg {
+  position: absolute;
+  top: 95vh;
+  width: 100%;
+  height: 341vh;
+  background: white;
+  z-index: -10;
+}
 
 /* header */
 header
