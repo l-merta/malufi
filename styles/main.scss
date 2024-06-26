@@ -253,9 +253,9 @@ main
         color: var(--c2);
         //background-color: var(--c1);
         font: 500 1.0em var(--f1);
-        padding: 0.5em 0.8em;
+        padding: 0.4em 0.7em;
         position: absolute;
-        top: -1.5em;
+        top: -1.8em;
         right: -2em;
         backdrop-filter: blur(20px);
       }
@@ -522,6 +522,7 @@ main
     gap: 1em;
     
     --bod-width: 24%;
+    --bod-width-min: 25em;
     //--bod-height: 20em;
     --bod-indent: 10em;
 
@@ -554,11 +555,12 @@ main
     .bod
     {
       width: var(--bod-width);
+      min-width: var(--bod-width-min);
       height: var(--bod-height);
       
       .nadpis
       {
-        font: 600 2.5em var(--f1);
+        font: 600 2.2em var(--f1);
         display: flex;
         align-items: center;
         gap: 0.5em;
@@ -572,14 +574,14 @@ main
     }
     .bod-left
     {
-      margin-right: calc(var(--bod-width) + var(--bod-indent));
+      margin-right: calc(var(--bod-width-min) + var(--bod-indent) + 1em);
       animation: bodAppearLeft linear;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;
     }
     .bod-right
     {
-      margin-left: calc(var(--bod-width) + var(--bod-indent));
+      margin-left: calc(var(--bod-width-min) + var(--bod-indent));
       animation: bodAppearRight linear;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;
@@ -706,6 +708,31 @@ footer
       align-items: start;
       justify-content: space-evenly;
       gap: 2em;
+    }
+  }
+  .postup
+  {
+    .cont
+    {
+      padding-left: 4em;
+      align-items: start;
+      gap: 2em;
+
+      .lineCont
+      {
+        padding-left: 2em;
+        justify-content: start;
+      }
+      .bod
+      {
+        margin-left: 0;
+        max-width: 90vh;
+      
+        .nadpis
+        {
+          white-space: wrap;
+        }
+      }
     }
   }
 }

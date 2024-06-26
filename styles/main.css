@@ -209,9 +209,9 @@ main .aCont a {
 main .aCont a span {
   color: var(--c2);
   font: 500 1em var(--f1);
-  padding: 0.5em 0.8em;
+  padding: 0.4em 0.7em;
   position: absolute;
-  top: -1.5em;
+  top: -1.8em;
   right: -2em;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -421,6 +421,7 @@ main .aCont a:hover {
   align-items: center;
   gap: 1em;
   --bod-width: 24%;
+  --bod-width-min: 25em;
   --bod-indent: 10em;
 }
 .postup .cont .lineCont {
@@ -446,10 +447,11 @@ main .aCont a:hover {
 }
 .postup .cont .bod {
   width: var(--bod-width);
+  min-width: var(--bod-width-min);
   height: var(--bod-height);
 }
 .postup .cont .bod .nadpis {
-  font: 600 2.5em var(--f1);
+  font: 600 2.2em var(--f1);
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -460,13 +462,13 @@ main .aCont a:hover {
   margin: 0.5em 0;
 }
 .postup .cont .bod-left {
-  margin-right: calc(var(--bod-width) + var(--bod-indent));
+  margin-right: calc(var(--bod-width-min) + var(--bod-indent) + 1em);
   animation: bodAppearLeft linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
 .postup .cont .bod-right {
-  margin-left: calc(var(--bod-width) + var(--bod-indent));
+  margin-left: calc(var(--bod-width-min) + var(--bod-indent));
   animation: bodAppearRight linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
@@ -572,5 +574,21 @@ footer {
     align-items: start;
     justify-content: space-evenly;
     gap: 2em;
+  }
+  .postup .cont {
+    padding-left: 4em;
+    align-items: start;
+    gap: 2em;
+  }
+  .postup .cont .lineCont {
+    padding-left: 2em;
+    justify-content: start;
+  }
+  .postup .cont .bod {
+    margin-left: 0;
+    max-width: 90vh;
+  }
+  .postup .cont .bod .nadpis {
+    white-space: wrap;
   }
 }/*# sourceMappingURL=main.css.map */
