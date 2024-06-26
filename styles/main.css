@@ -289,7 +289,7 @@ main .aCont a:hover {
 .weby {
   width: 100%;
   height: 70vh;
-  margin-bottom: 10em;
+  margin-bottom: 0em;
 }
 .weby .slides {
   width: 100%;
@@ -519,6 +519,83 @@ main .aCont a:hover {
   animation: bodAppearRight linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
+}
+
+/* ceník */
+.cenik {
+  width: 100%;
+}
+.cenik .cont {
+  width: 100%;
+  padding-bottom: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.5em;
+}
+.cenik .cont .cena {
+  width: 20em;
+  padding: 2em 0;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.cenik .cont .cena h2 {
+  color: var(--c1);
+  font: 400 1.6em var(--f1);
+  margin: 0;
+  text-align: center;
+}
+.cenik .cont .cena h3 {
+  color: var(--c1);
+  font: 700 2.6em var(--f1);
+  padding-top: 0.3em;
+  padding-bottom: 0.7em;
+  margin: 0;
+  text-align: center;
+}
+.cenik .cont .cena ul {
+  padding: 0 3.5em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.cenik .cont .cena ul li {
+  font: 300 1.2em var(--f1);
+}
+.cenik .cont .cena .buttonCont {
+  display: flex;
+  justify-content: center;
+}
+.cenik .cont .cena .buttonCont button {
+  background-color: var(--c2);
+  font: 500 1.5em var(--f1);
+  border-radius: 0.25em;
+  margin-top: 1.8em;
+  padding: 0.7em 1em;
+  border: 2px solid var(--c1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.cenik .cont .cena .buttonCont button:hover {
+  color: var(--c1);
+  background-color: var(--c4);
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
+}
+.cenik .cont .cena-pick {
+  box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.5);
+}
+.cenik .cont .cena-pick button {
+  background-color: var(--c4) !important;
+  border: 2px solid transparent !important;
+}
+.cenik .cont .cena-pick button:hover {
+  background-color: var(--c2) !important;
+  border: 2px solid var(--c1) !important;
+  box-shadow: none !important;
 }
 
 /* kontakt */
