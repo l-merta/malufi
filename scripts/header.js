@@ -1,16 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
-  const kontakt_mini = document.querySelector('.kontakt-mini');
+  const uvod = document.querySelector('main');
+  const umime = document.querySelector('.umime');
+  //const kontakt_mini = document.querySelector('.kontakt-mini');
   const kontakt = document.querySelector('.kontakt');
   //let firstWhite = calculateFirstWhite(main);
   let colorChange = [
     {
-      height: calculateColorChange(kontakt_mini.offsetTop), //main.scrollHeight - (window.innerHeight * 0.15)
-      class: ["header-light", "header-dark"]
+      top: calculateColorChange(uvod.offsetTop), //main.scrollHeight - (window.innerHeight * 0.15)
+      height: calculateColorChange(uvod.offsetTop) + uvod.offsetHeight
+      //class: ["header-light", "header-dark"]
     },
     {
-      height: calculateColorChange(kontakt.offsetTop),
-      class: ["header-dark", "header-light"]
+      top: calculateColorChange(umime.offsetTop),
+      height: calculateColorChange(umime.offsetTop) + umime.offsetHeight
+    },
+    {
+      top: calculateColorChange(kontakt.offsetTop),
+      height: calculateColorChange(kontakt.offsetTop) + kontakt.offsetHeight
     }
   ];
 
@@ -37,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       headerElement.classList = "header-dark";
     }
     */
+    /*
     if (window.scrollY > colorChange[0].height) {
       headerElement.classList = colorChange[0].class[0];
       if (window.scrollY > colorChange[1].height) {
@@ -46,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else {
       headerElement.classList = colorChange[0].class[1];
+    }
+    */
+    console.log(colorChange[0].top, colorChange[0].height, window.scrollY);
+    if(window.scrollY >= colorChange[0].top && window.scrollY <= colorChange[0].height ||
+       window.scrollY >= colorChange[1].top && window.scrollY <= colorChange[1].height ||
+       window.scrollY >= colorChange[2].top && window.scrollY <= colorChange[2].height) {
+      headerElement.classList = "header-dark";
+    }
+    else {
+      headerElement.classList = "header-light";
     }
   }
 });

@@ -442,6 +442,63 @@ main
   }
 }
 
+/* s čím makáme */
+.umime
+{
+  color: var(--c2);
+  //background-color: rgba(6, 36, 75, 0.9);
+  background: rgb(22,44,54);
+  background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
+  width: 100%;
+  margin-bottom: 3em;
+  padding-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .cont
+  {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+
+    .tech
+    {
+      color: var(--c2);
+      background-color: transparent;
+      aspect-ratio: 1/1;
+      width: 7em;
+      border: 1px solid rgb(50, 50, 50);
+      border-radius: 0.5em;
+      box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      transition: all .2s;
+
+      i
+      {
+        font-size: 2.5em;
+      }
+      span
+      {
+        font: 400 1.0em var(--f1);
+      }
+    }
+    .tech:hover
+    {
+      color: var(--c1);
+      background-color: var(--c2);
+      border: 1px solid rgb(201, 201, 201);
+      box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
 /* služby */
 .sluzby
 {
