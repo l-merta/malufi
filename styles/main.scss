@@ -10,6 +10,7 @@
   --f2: "Oswald";
   --hh: 6em;
   --fh: 3em;
+  --particles-js-bg-height: 500vh;
 }
 html
 {
@@ -84,7 +85,7 @@ body *
   position: absolute;
   top: 95vh;
   width: 20%;
-  height: 450vh;
+  height: var(--particles-js-bg-height);
   background: white;
   z-index: -10;
 }
@@ -93,7 +94,7 @@ body *
   top: 95vh;
   width: 20%;
   left: 80%;
-  height: 450vh;
+  height: var(--particles-js-bg-height);
   background: white;
   z-index: -10;
 }
@@ -855,6 +856,10 @@ footer
 }
 @media screen and (max-width: 1100px)
 {
+  :root
+  {
+    --particles-js-bg-height: 650vh;
+  }
   .kontakt-mini
   {
     height: fit-content;

@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
       headerElement.classList = colorChange[0].class[1];
     }
     */
-    console.log(colorChange[0].top, colorChange[0].height, window.scrollY);
     if(window.scrollY >= colorChange[0].top && window.scrollY <= colorChange[0].height ||
        window.scrollY >= colorChange[1].top && window.scrollY <= colorChange[1].height ||
        window.scrollY >= colorChange[2].top && window.scrollY <= colorChange[2].height) {
