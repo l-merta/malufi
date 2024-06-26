@@ -74,7 +74,7 @@ body * {
   position: absolute;
   top: 95vh;
   width: 20%;
-  height: 341vh;
+  height: 450vh;
   background: white;
   z-index: -10;
 }
@@ -84,7 +84,7 @@ body * {
   top: 95vh;
   width: 20%;
   left: 80%;
-  height: 341vh;
+  height: 450vh;
   background: white;
   z-index: -10;
 }
@@ -527,7 +527,7 @@ main .aCont a:hover {
 }
 .cenik .cont {
   width: 100%;
-  padding-bottom: 3em;
+  padding-bottom: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -571,10 +571,10 @@ main .aCont a:hover {
 }
 .cenik .cont .cena .buttonCont button {
   background-color: var(--c2);
-  font: 500 1.5em var(--f1);
+  font: 500 1.4em var(--f1);
   border-radius: 0.25em;
   margin-top: 1.8em;
-  padding: 0.7em 1em;
+  padding: 0.6em 0.9em;
   border: 2px solid var(--c1);
   transition: all 0.3s;
   cursor: pointer;
@@ -586,6 +586,7 @@ main .aCont a:hover {
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
 }
 .cenik .cont .cena-pick {
+  border: none !important;
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.5);
 }
 .cenik .cont .cena-pick button {
