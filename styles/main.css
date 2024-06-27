@@ -538,12 +538,14 @@ main .aCont a:hover {
   gap: 3.5em;
 }
 .cenik .cont .cena {
-  width: 20em;
+  background-color: var(--c2);
+  width: 22em;
   padding: 3em 0;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 0.5em;
   overflow: hidden;
   transition: scale 0.12s;
+  z-index: 10;
 }
 .cenik .cont .cena h2 {
   color: var(--c1);
@@ -557,9 +559,9 @@ main .aCont a:hover {
   font: 700 2.6em var(--f1);
   border-bottom: 1px solid rgb(202, 202, 202);
   padding-top: 0.3em;
-  padding-bottom: 0.45em;
+  padding-bottom: 0.55em;
   margin: 0;
-  margin-bottom: 0.45em;
+  margin-bottom: 0.55em;
   text-align: center;
 }
 .cenik .cont .cena ul {
@@ -580,7 +582,7 @@ main .aCont a:hover {
   background-color: var(--c2);
   font: 500 1.4em var(--f1);
   border-radius: 0.25em;
-  margin-top: 1.8em;
+  margin-top: 4em;
   padding: 0.6em 0.9em;
   border: 2px solid var(--c1);
   transition: all 0.3s;
@@ -602,12 +604,9 @@ main .aCont a:hover {
 .cenik .cont .cena-pick button {
   background-color: var(--c4) !important;
   border: 2px solid transparent !important;
-  box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
 }
 .cenik .cont .cena-pick button:hover {
-  background-color: var(--c2) !important;
-  border: 2px solid var(--c1) !important;
-  box-shadow: none !important;
+  box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
 }
 
 /* kontakt */
