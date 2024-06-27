@@ -290,7 +290,7 @@ main .aCont a:hover {
 .weby {
   width: 100%;
   height: 70vh;
-  margin-bottom: 0em;
+  margin-bottom: 8em;
 }
 .weby .slides {
   width: 100%;
@@ -340,10 +340,12 @@ main .aCont a:hover {
   width: 105%;
 }
 .weby .dots {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 10px;
   width: 100%;
-  margin-top: 2em;
+  margin-top: 4em;
 }
 .weby .dot {
   cursor: pointer;
@@ -369,7 +371,7 @@ main .aCont a:hover {
   background: rgb(22, 44, 54);
   background: linear-gradient(90deg, rgb(22, 44, 54) 0%, rgb(17, 29, 34) 27%, rgb(15, 24, 28) 69%, rgb(19, 25, 46) 100%);
   width: 100%;
-  margin-bottom: 3em;
+  margin-bottom: 7em;
   padding-bottom: 4em;
   display: flex;
   flex-direction: column;
@@ -459,7 +461,7 @@ main .aCont a:hover {
 /* postup */
 .postup {
   margin-top: 7em;
-  margin-bottom: 5em;
+  margin-bottom: 8em;
 }
 .postup .cont {
   width: 100%;
@@ -528,7 +530,7 @@ main .aCont a:hover {
 }
 .cenik .cont {
   width: 100%;
-  padding-bottom: 5em;
+  padding-bottom: 15em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,6 +543,7 @@ main .aCont a:hover {
   border: 1px solid rgb(202, 202, 202);
   border-radius: 0.5em;
   overflow: hidden;
+  transition: scale 0.12s;
 }
 .cenik .cont .cena h2 {
   color: var(--c1);
@@ -586,6 +589,9 @@ main .aCont a:hover {
   border: 2px solid transparent;
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
 }
+.cenik .cont .cena:hover {
+  scale: 1.05;
+}
 .cenik .cont .cena-pick {
   border: none !important;
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.5);
@@ -593,6 +599,7 @@ main .aCont a:hover {
 .cenik .cont .cena-pick button {
   background-color: var(--c4) !important;
   border: 2px solid transparent !important;
+  box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
 }
 .cenik .cont .cena-pick button:hover {
   background-color: var(--c2) !important;
@@ -623,12 +630,12 @@ main .aCont a:hover {
   font-weight: 600;
 }
 .kontakt button {
-  color: var(--c2);
-  background: transparent;
+  color: var(--c1);
+  background: var(--c4);
   font: 600 1.2em var(--f1);
   width: -moz-fit-content;
   width: fit-content;
-  border: 3px solid var(--c2);
+  border: 3px solid transparent;
   padding: 0.8em 1.2em;
   border-radius: 0.25em;
   display: flex;
@@ -640,10 +647,10 @@ main .aCont a:hover {
   z-index: 1;
 }
 .kontakt button:hover {
-  color: var(--c1);
-  background: var(--c4);
-  border-color: transparent;
-  box-shadow: 0px 0px 40px 0px rgba(63, 131, 209, 0.8);
+  color: var(--c2);
+  background: transparent;
+  border-color: var(--c2);
+  box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.4);
 }
 .kontakt .tel {
   color: var(--c2);

@@ -354,7 +354,7 @@ main
 {
   width: 100%;
   height: 70vh;
-  margin-bottom: 0em;
+  margin-bottom: 8em;
 
   .slides
   {
@@ -415,11 +415,13 @@ main
   
   .dots 
   {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     //position: absolute;
     bottom: 10px;
     width: 100%;
-    margin-top: 2em;
+    margin-top: 4em;
   }
   .dot 
   {
@@ -451,7 +453,7 @@ main
   background: rgb(22,44,54);
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
-  margin-bottom: 3em;
+  margin-bottom: 7em;
   padding-bottom: 4em;
   display: flex;
   flex-direction: column;
@@ -565,7 +567,7 @@ main
 .postup
 {
   margin-top: 7em;
-  margin-bottom: 5em;
+  margin-bottom: 8em;
   
 
   .cont
@@ -655,7 +657,7 @@ main
   .cont
   {
     width: 100%;
-    padding-bottom: 5em;
+    padding-bottom: 15em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -670,6 +672,7 @@ main
       border: 1px solid rgb(202, 202, 202);
       border-radius: 0.5em;
       overflow: hidden;
+      transition: scale .12s;
 
       h2
       {
@@ -728,6 +731,10 @@ main
         }
       }
     }
+    .cena:hover
+    {
+      scale: 1.05;
+    }
     .cena-pick
     {
       border: none !important;
@@ -737,6 +744,7 @@ main
       {
         background-color: var(--c4) !important;
         border: 2px solid transparent !important;
+        box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
       }
       button:hover
       {
@@ -777,13 +785,13 @@ main
   }
   button
   {
-    color: var(--c2);
+    color: var(--c1);
     //background: rgba(80, 103, 187, 0);
     //background: linear-gradient(90deg, rgba(80,104,187,1) 0%, rgba(77,150,185,1) 100%);
-    background: transparent;
+    background: var(--c4);
     font: 600 1.2em var(--f1);
     width: fit-content;
-    border: 3px solid var(--c2);
+    border: 3px solid transparent;
     padding: 0.8em 1.2em;
     border-radius: 0.25em;
     display: flex;
@@ -796,10 +804,10 @@ main
   }
   button:hover
   {
-    color: var(--c1);
-    background: var(--c4);
-    border-color: transparent;
-    box-shadow: 0px 0px 40px 0px rgba(63, 131, 209, 0.8);
+    color: var(--c2);
+    background: transparent;
+    border-color: var(--c2);
+    box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.4);
   }
   .tel
   {
