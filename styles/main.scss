@@ -667,8 +667,8 @@ main
     .cena
     {
       background-color: var(--c2);
-      min-width: 22em;
-      max-width: 22em;
+      min-width: 20.5em;
+      max-width: 20.5em;
       //height: 30em;
       padding: 3.0em 0;
       border: 1px solid rgb(202, 202, 202);
@@ -762,6 +762,8 @@ main
     }
     .cena-pick
     {
+      min-width: 23em !important;
+      max-width: 23em !important;
       border: none !important;
       box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.5);
 
@@ -769,6 +771,7 @@ main
       {
         background-color: var(--c4) !important;
         border: 2px solid transparent !important;
+        margin-top: 6.0em !important;
       }
       button:hover
       {

@@ -539,8 +539,8 @@ main .aCont a:hover {
 }
 .cenik .cont .cena {
   background-color: var(--c2);
-  min-width: 22em;
-  max-width: 22em;
+  min-width: 20.5em;
+  max-width: 20.5em;
   padding: 3em 0;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 0.5em;
@@ -612,12 +612,15 @@ main .aCont a:hover {
   scale: 1.05;
 }
 .cenik .cont .cena-pick {
+  min-width: 23em !important;
+  max-width: 23em !important;
   border: none !important;
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.5);
 }
 .cenik .cont .cena-pick button {
   background-color: var(--c4) !important;
   border: 2px solid transparent !important;
+  margin-top: 6em !important;
 }
 .cenik .cont .cena-pick button:hover {
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
