@@ -690,12 +690,31 @@ main
       {
         color: var(--c1);
         font: 700 2.6em var(--f1);
-        border-bottom: 1px solid rgb(202, 202, 202);
+        //border-bottom: 2px solid rgb(202, 202, 202);
         padding-top: 0.3em;
         padding-bottom: 0.55em;
-        margin: 0;
+        margin: 0 auto;
         margin-bottom: 0.55em;
+        position: relative;
+        //white-space: nowrap;
         text-align: center;
+
+        .lineCont
+        {
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+
+          .line
+          {
+            background-color: rgb(202, 202, 202);
+            width: 20%;
+            height: 100%;
+          }
+        }
       }
       ul
       {
