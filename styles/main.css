@@ -539,7 +539,8 @@ main .aCont a:hover {
 }
 .cenik .cont .cena {
   background-color: var(--c2);
-  width: 22em;
+  min-width: 22em;
+  max-width: 22em;
   padding: 3em 0;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 0.5em;
