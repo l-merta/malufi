@@ -668,7 +668,7 @@ main
     {
       width: 20em;
       //height: 30em;
-      padding: 2.0em 0;
+      padding: 3.0em 0;
       border: 1px solid rgb(202, 202, 202);
       border-radius: 0.5em;
       overflow: hidden;
@@ -681,15 +681,18 @@ main
         font: 400 1.6em var(--f1);
         //padding: 0.7em 0;
         margin: 0;
+        margin-top: -0.5em;
         text-align: center;
       }
       h3
       {
         color: var(--c1);
         font: 700 2.6em var(--f1);
+        border-bottom: 1px solid rgb(202, 202, 202);
         padding-top: 0.3em;
-        padding-bottom: 0.7em;
+        padding-bottom: 0.45em;
         margin: 0;
+        margin-bottom: 0.45em;
         text-align: center;
       }
       ul
