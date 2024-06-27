@@ -1,0 +1,129 @@
+.kontakt
+{
+  width: 100%;
+  height: calc(100vh - var(--hh));
+  margin-top: 8em;
+  padding-top: 0.8em;
+  position: relative;
+}
+.kontakt .bg
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  filter: grayscale(0.35);
+  filter: blur(0px);
+  z-index: -1;
+}
+.kontakt .info
+{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  position: absolute;
+  top: 4em;
+  left: 4em;
+  bottom: 0;
+}
+.kontakt .info .name
+{
+  color: var(--c32);
+  font: 600 2em var(--f1);
+}
+.kontakt .info .owner
+{
+  font: 500 1.4em var(--f1);
+  margin-top: 0.3em;
+}
+.kontakt .info .address
+{
+  font: 400 1.4em var(--f1);
+  margin-top: 1.0em;
+}
+.kontakt .info .tel
+{
+  font: 500 1.4em var(--f1);
+  margin-top: 0.5em;
+}
+.kontakt .info .email
+{
+  font: 500 1.4em var(--f1);
+}
+.kontakt .info .ic
+{
+  font: 400 1.4em var(--f1);
+  margin-top: 0.8em;
+}
+.kontakt .info span
+{
+  color: var(--c1);
+  font-style: italic;
+}
+.kontakt .bannerCont
+{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+}
+.kontakt .bannerCont .banner
+{
+  background-color: var(--c32);
+  width: 30em;
+  max-width: 87vw;
+  height: 10em;
+}
+.kontakt .bannerCont .banner1
+{
+  height: 8em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.kontakt .bannerCont .banner1 span
+{
+  color: var(--c2);
+  font: 600 2.0em var(--f1);
+}
+.kontakt .bannerCont .banner1 .soc
+{
+  color: var(--c2);
+  font-size: 2.0em;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.kontakt .bannerCont .banner2
+{
+  color: var(--c32);
+  background-color: var(--c2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kontakt .bannerCont .banner2 span
+{
+  font: 300 2.5em var(--f2);
+  text-align: center;
+}
+
+@media (orientation: portrait)
+{
+  .kontakt
+  {
+    height: 91vh;
+  }
+  .kontakt .bg
+  {
+    opacity: 0.6;
+  }
+  .kontakt .bannerCont .banner2 span
+  {
+    font-size: 2.2em;
+  }
+}

@@ -1,0 +1,164 @@
+:root
+{
+  --hh: 5em;
+  --font-header: "Poppins";
+  --font-header2: "Great Vibes";
+  --font-header3: "Merriweather";
+  --font-par: "Reddit Mono";
+  --bc-main: whitesmoke;
+  --bc1: rgb(37, 90, 92);
+  --bc2: rgb(11, 46, 44);
+  /* --bc3: rgb(189, 135, 74); */
+  --bc3: rgb(209, 147, 53);
+  --bc4: rgb(61, 43, 16);
+  --fc1: white;
+  --top: 5vh;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+body
+{
+  background-color: var(--bc-main);
+  margin: 0;
+  /* margin-top: var(--hh); */
+  overflow-x: hidden;
+}
+body *
+{
+  box-sizing: border-box;
+}
+.disabled
+{
+  display: none !important;
+}
+.anchor
+{
+  position: relative;
+  top: -5em;
+}
+.header-small
+{
+  color: white;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  font: 500 3em var(--font-header2);
+  width: 100%;
+  /* padding: 0em 8vw; */
+  padding-top: 0.8em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.header-small-black
+{
+  color: rgba(0, 0, 0, 0.9);
+  background: transparent;
+}
+.header-small span
+{
+  position: relative;
+}
+.header-small .line
+{
+  background-color: white;
+  width: 80%;
+  height: 0.05em;
+  position: absolute;
+  margin-left: -1vw;
+}
+.header-small-black .line
+{
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gradLineCont
+{
+  width: 100%;
+  overflow: hidden;
+}
+.gradLine
+{
+  /* background-color: var(--bc3); */
+  /* opacity: 0.7; */
+  width: 120%;
+  height: 5em;
+  margin-left: -10%;
+  position: relative;
+}
+.gradLine1
+{
+  background-color: rgb(202, 163, 105);
+  top: -1em;
+  transform: rotate(-0.5deg);
+}
+.gradLine2
+{
+  background-color: rgb(214, 186, 143);
+  top: -4em;
+  transform: rotate(0.5deg);
+}
+.gradLine3
+{
+  background-color: rgb(233, 220, 200);
+  top: -6em;
+  margin-bottom: -7em;
+  transform: rotate(-0.5deg);
+}
+.gradLine4
+{
+  /* background-color: rgb(136, 100, 47); */
+  width: 120%;
+  height: 2em;
+  margin-left: -10%;
+  margin-bottom: -8em;
+  position: relative;
+  top: -8em;
+}
+
+.lang
+{
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 3.0em;
+  border-radius: 2em;
+  padding: 0.3em;
+  display: flex;
+  gap: 0.5em;
+  z-index: 20;
+}
+.lang img
+{
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .12s;
+}
+.lang .img-active
+{
+  border: 3px solid rgba(245, 245, 245, 0.4);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(56, 56, 56);
+  border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 56, 56, 0.8);
+}

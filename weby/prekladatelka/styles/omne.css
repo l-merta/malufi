@@ -1,0 +1,242 @@
+.omne
+{
+  background-color: whitesmoke;
+  width: 100%;
+  position: relative;
+  
+}
+.omne .cont
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* gap: 3em; */
+  padding: 10em 5vw;
+  padding-bottom: 5em;
+}
+.omne .s1
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+}
+.omne .s1 img
+{
+  width: 20vw;
+  border-radius: 50%;
+}
+.omne .s1 .body
+{
+  /* background-color: red;
+  width: 20vw;
+  height: 30em; */
+  max-width: 40em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.0em;
+}
+.omne .s1 .body .bod
+{
+  font: 500 1.25em var(--font-header);
+  display: flex;
+  align-items: start;
+  gap: 0.8em;
+}
+.omne .s1 .body .bod i
+{
+  color: var(--bc3);
+  margin-top: 0.2em;
+}
+.omne .s2
+{
+  /* height: 35em; */
+  width: 100%;
+}
+.omne .s2 h1
+{
+  font: 600 2.5em var(--font-header2);
+  margin: 0;
+}
+.omne .s2 p
+{
+  font: 400 1.35em var(--font-header);
+  margin-top: 1em;
+  max-width: 28em;
+}
+
+.omne .timeline
+{
+  /* background-color: red; */
+  width: 100%;
+  height: 18em;
+  position: relative;
+}
+.omne .timeline .transition
+{
+  background: whitesmoke;
+  background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(245,245,245,0) 100%);
+  height: 5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.omne .timeline .points
+{
+  height: 6em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.0em;
+}
+.omne .timeline .points .point
+{
+  background-color: whitesmoke;
+  aspect-ratio: 1/1;
+  height: 1.2em;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .12s;
+}
+.omne .timeline .points .point-active
+{
+  height: 1.0em;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.omne .timeline .arrows
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  pointer-events: none;
+}
+.omne .timeline .arrows button
+{
+  background-color: transparent;
+  font-size: 1.4em;
+  aspect-ratio: 1/1;
+  width: 2em;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+}
+.omne .timeline .arrows .b1
+{
+  opacity: 0;
+  pointer-events: none;
+}
+.omne .timeline .arrows button img
+{
+  width: 75%;
+}
+.omne .timeline .udalosti
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.omne .timeline .udalost
+{
+  /* background-color: gray; */
+  height: 100%;
+  min-width: 50vw;
+  max-width: 50vw;
+  padding: 2em 5vw;
+  position: relative;
+  left: 0;
+  transition: all .4s;
+}
+.omne .timeline .udalost-last
+{
+  min-width: 100vw;
+  max-width: 100vw;
+}
+.omne .timeline .udalost h1
+{
+  opacity: 0.6;
+  /* font: 600 2.5em var(--font-header2); */
+  font: 600 2.0em var(--font-header);
+  margin: 0;
+  margin-bottom: 0.3em;
+  position: relative;
+  z-index: 1;
+}
+.omne .timeline .udalost p
+{
+  font: 600 1.3em var(--font-header);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.omne .timeline .udalost-last p
+{
+  width: 60%;
+}
+.omne .timeline .udalost img
+{
+  opacity: 0.3;
+  filter: grayscale(0.5);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+@media (orientation: portrait)
+{
+  .omne .cont
+  {
+    flex-direction: column;
+  }
+  .omne .s1
+  {
+    align-items: center;
+    gap: 2em;
+  }
+  .omne .s1 img
+  {
+    width: 50vw;
+  }
+  .omne .timeline .udalost
+  {
+    min-width: 100vw;
+    max-width: 100vw;
+    padding: 2em 4em;
+  }
+  .omne .timeline .udalost-last p
+  {
+    width: 100%;
+  }
+  .omne .timeline .points
+  {
+    display: none;
+  }
+  .omne .timeline .arrows
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
