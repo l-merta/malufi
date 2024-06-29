@@ -642,6 +642,7 @@ main .aCont a:hover {
 .kontakt .slogan {
   color: var(--c2);
   font: 300 3em var(--f1);
+  text-align: center;
   pointer-events: none;
   z-index: 1;
 }
@@ -717,12 +718,27 @@ footer {
   :root {
     --particles-js-bg-height: 650vh;
   }
+  header {
+    padding: 0 6vw;
+  }
+  header nav {
+    display: none !important;
+  }
+  main {
+    padding: calc(var(--hh) + 0vh) 0 0 6vw;
+  }
+  main .slogan {
+    width: 90vw;
+  }
+  main .podslogan {
+    width: 90vw;
+  }
   .kontakt-mini {
     height: -moz-fit-content;
     height: fit-content;
   }
   .kontakt-mini .cont {
-    width: 50%;
+    width: 90%;
     padding: 1.5em;
     display: flex;
     flex-direction: column;
@@ -745,5 +761,21 @@ footer {
   }
   .postup .cont .bod .nadpis {
     white-space: wrap;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .sluzby .cont {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sluzby .cont {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 620px) {
+  .weby .slides .web {
+    scale: 0.8;
+    margin-left: -1vw;
   }
 }/*# sourceMappingURL=main.css.map */
