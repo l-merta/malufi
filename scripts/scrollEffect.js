@@ -4,6 +4,7 @@ pjsbg.push(document.querySelector("#particles-js-bg-r"));
 
 window.addEventListener('scroll', () => {
   const scrollValue = window.scrollY;
-  //pjsbg[0].style = "top: "+scrollValue+";";
-  //pjsbg[1].style = "top: "+scrollValue+";";
+  console.log(scrollValue);
+  pjsbg[0].style = "top: "+(scrollValue * 0.3)+"px;";
+  pjsbg[1].style = "top: "+(scrollValue * 0.3)+"px;";
 });
