@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   showSlide(1);
   function showSlide(index) {
-    const odlevahele = index * 43.5; //width 38 + gap 5.5
+    const odlevahele = -(index-3) * 43.5; //width 38 + gap 5.5
     slides.forEach((slide, i) => {
-      slides[i].style = "left: -"+odlevahele+"em;";
+      slides[i].style = "left: "+odlevahele+"em;";
     });
     dots.forEach(dot => dot.classList.remove('active'));
     if(index != slides.length)

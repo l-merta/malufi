@@ -356,8 +356,9 @@ main
     width: 100%;
     //margin-top: 8vh;
     padding: 1em;
-    padding-left: calc(50% - 19em);
+    //padding-left: calc(50% - 19em);
     display: flex;
+    justify-content: center;
     gap: 5.5em;
     overflow: hidden;
 
@@ -973,6 +974,16 @@ footer
       gap: 2em;
     }
   }
+  .weby
+  {
+    .slides
+    {
+      .web
+      {
+        scale: 0.6;
+      }
+    }
+  }
   .postup
   {
     .cont
@@ -1010,6 +1021,18 @@ footer
     {
       min-width: 85vw !important;
       max-width: 85vw !important;
+    }
+  }
+  footer
+  {
+    height: 8em;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    .line
+    {
+      display: none;
     }
   }
 }
@@ -1058,8 +1081,8 @@ footer
   {
     .slides
     {
-      margin-left: -10em;
-      padding-left: 0;
+      //margin-left: -10em;
+      //padding-left: 0;
     }
   }
 }

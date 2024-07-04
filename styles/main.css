@@ -299,8 +299,8 @@ main .aCont a:hover {
 .weby .slides {
   width: 100%;
   padding: 1em;
-  padding-left: calc(50% - 19em);
   display: flex;
+  justify-content: center;
   gap: 5.5em;
   overflow: hidden;
 }
@@ -781,6 +781,9 @@ footer .links a:hover {
     justify-content: space-evenly;
     gap: 2em;
   }
+  .weby .slides .web {
+    scale: 0.6;
+  }
   .postup .cont {
     padding-left: 4em;
     align-items: start;
@@ -806,6 +809,15 @@ footer .links a:hover {
     min-width: 85vw !important;
     max-width: 85vw !important;
   }
+  footer {
+    height: 8em;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  footer .line {
+    display: none;
+  }
 }
 @media screen and (max-width: 1350px) {
   .sluzby .cont {
@@ -815,11 +827,5 @@ footer .links a:hover {
 @media screen and (max-width: 900px) {
   .sluzby .cont {
     grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 38em) {
-  .weby .slides {
-    margin-left: -10em;
-    padding-left: 0;
   }
 }/*# sourceMappingURL=main.css.map */
