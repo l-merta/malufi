@@ -973,16 +973,6 @@ footer
       gap: 2em;
     }
   }
-  .sluzby
-  {
-    .cont
-    {
-      .sluzba
-      {
-        width: 90vw;
-      }
-    }
-  }
   .postup
   {
     .cont
@@ -1054,9 +1044,22 @@ footer
       //justify-content: center;
       .web
       {
-        scale: 0.8;
-        margin-left: -1vw;
+        //min-width: 100vw !important;
+        //max-width: 100vw !important;
+        //scale: 0.8;
+        //margin-left: 6vw;
       }
+    }
+  }
+}
+@media screen and (max-width: 38em)
+{
+  .weby
+  {
+    .slides
+    {
+      margin-left: -10em;
+      padding-left: 0;
     }
   }
 }

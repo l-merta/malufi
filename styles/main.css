@@ -781,9 +781,6 @@ footer .links a:hover {
     justify-content: space-evenly;
     gap: 2em;
   }
-  .sluzby .cont .sluzba {
-    width: 90vw;
-  }
   .postup .cont {
     padding-left: 4em;
     align-items: start;
@@ -820,9 +817,9 @@ footer .links a:hover {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 620px) {
-  .weby .slides .web {
-    scale: 0.8;
-    margin-left: -1vw;
+@media screen and (max-width: 38em) {
+  .weby .slides {
+    margin-left: -10em;
+    padding-left: 0;
   }
 }/*# sourceMappingURL=main.css.map */
