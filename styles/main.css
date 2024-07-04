@@ -10,7 +10,7 @@
   --f1: "Poppins";
   --f2: "Oswald";
   --hh: 6em;
-  --fh: 3em;
+  --fh: 8em;
   --particles-js-bg-height: 435vh;
 }
 
@@ -691,7 +691,25 @@ footer {
   height: var(--fh);
   padding: 0 5vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+footer .corp {
+  font: 600 1.4em var(--f1);
+  letter-spacing: 0.2em;
+}
+footer .links {
+  margin-top: 0.5em;
+}
+footer .links a {
+  color: whitesmoke;
+  font: 300 1em var(--f1);
+  text-decoration: none;
+  cursor: pointer;
+}
+footer .links a:hover {
+  text-decoration: underline;
 }
 
 @keyframes bodAppearLeft {
