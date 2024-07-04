@@ -784,6 +784,9 @@ footer .links a:hover {
   .weby .slides .web {
     scale: 0.6;
   }
+  .umime .cont {
+    width: 80%;
+  }
   .postup .cont {
     padding-left: 4em;
     align-items: start;
