@@ -1043,6 +1043,11 @@ footer
     .cont
     {
       grid-template-columns: 1fr 1fr;
+
+      .sluzba
+      {
+        max-width: 90vw;
+      }
     }
   }
 }
