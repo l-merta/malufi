@@ -2,18 +2,18 @@ const slides = document.querySelector(".weby .slides");
 const dots = document.querySelector(".weby .dots");
 
 const webs = [
-  "images/anglictina.png",
+  "images/piana.png",
   "images/fitnes.png",
   "images/melisa.png",
   "images/krystof.png",
-  "images/piana.png"
+  "images/anglictina.png"
 ];
 const webColors = [
-  "images/anglictina_pozadi.png",
+  "images/piana_pozadi.png",
   "images/fitnes_pozadi.png",
   "images/melisa_pozadi.png",
   "images/krystof_pozadi.png",
-  "images/piana_pozadi.png",
+  "images/anglictina_pozadi.png"
 ]
 ///
 
