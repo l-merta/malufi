@@ -719,6 +719,7 @@ footer .corp {
 footer .links {
   display: flex;
   align-items: center;
+  gap: 1.5em;
 }
 footer .links a {
   color: whitesmoke;
