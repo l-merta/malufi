@@ -11,7 +11,8 @@
   --f2: "Oswald";
   --hh: 6em;
   --fh: 5em;
-  --particles-js-bg-height: 435vh;
+  --particles-js-bg-height: 300vh;
+  --transition-scroll-effect: 0.04s;
 }
 
 html {
@@ -80,6 +81,7 @@ body * {
   height: var(--particles-js-bg-height);
   background: var(--c7);
   z-index: -10;
+  transition: top var(--transition-scroll-effect);
 }
 
 #particles-js-bg-r {
@@ -90,6 +92,7 @@ body * {
   height: var(--particles-js-bg-height);
   background: var(--c7);
   z-index: -10;
+  transition: top var(--transition-scroll-effect);
 }
 
 /* header */
@@ -498,6 +501,7 @@ main .aCont a:hover {
   width: 100%;
   max-height: 100%;
   min-height: 0;
+  transition: height var(--transition-scroll-effect);
 }
 .postup .cont .bod {
   width: var(--bod-width);
@@ -755,7 +759,7 @@ footer .links a:hover {
 @media screen and (max-width: 1100px) {
   :root {
     --fh: 8em;
-    --particles-js-bg-height: 650vh;
+    --particles-js-bg-height: 500vh;
   }
   header {
     padding: 0 6vw;

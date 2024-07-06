@@ -4,8 +4,8 @@ pjsbg.push(document.querySelector("#particles-js-bg-r"));
 
 updateScrollEffect();
 function updateScrollEffect() {
-  console.log(window.innerWidth);
-  if(window.innerWidth < 1100) {
+  //console.log(window.innerWidth);
+  if(false) { window.innerWidth < 1100
     //mobil
     const scrollValue = window.innerHeight;
     pjsbg[0].style = "top: "+(scrollValue * 0.85)+"px;";

@@ -11,7 +11,8 @@
   --f2: "Oswald";
   --hh: 6em;
   --fh: 5em;
-  --particles-js-bg-height: 435vh; //500vh;
+  --particles-js-bg-height: 300vh; //450vh;
+  --transition-scroll-effect: 0.04s;
 }
 html
 {
@@ -90,6 +91,7 @@ body *
   height: var(--particles-js-bg-height);
   background: var(--c7);
   z-index: -10;
+  transition: top var(--transition-scroll-effect);
 }
 #particles-js-bg-r {
   position: absolute;
@@ -99,6 +101,7 @@ body *
   height: var(--particles-js-bg-height);
   background: var(--c7);
   z-index: -10;
+  transition: top var(--transition-scroll-effect);
 }
 
 /* header */
@@ -608,6 +611,7 @@ main
           width: 100%;
           max-height: 100%;
           min-height: 0;
+          transition: height var(--transition-scroll-effect);
         }
       }
     }
@@ -945,7 +949,7 @@ footer
   :root
   {
     --fh: 8em;
-    --particles-js-bg-height: 650vh;
+    --particles-js-bg-height: 500vh; //650vh;
   }
   header
   {
