@@ -1,0 +1,3 @@
+function zapnoutCookies() {
+  //tady :D
+}
