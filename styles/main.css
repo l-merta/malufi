@@ -127,9 +127,10 @@ body * {
   color: var(--c1);
   background: var(--c4);
   font: 700 1em var(--f1);
+  width: 8em;
   border: 2px solid transparent;
   border-radius: 0.25em;
-  padding: 0.5em 0.8em;
+  padding: 0.5em 0;
   cursor: pointer;
   transition: all 0.12s;
 }
@@ -137,10 +138,11 @@ body * {
   color: rgb(185, 185, 185);
   background: transparent;
   font: 400 1em var(--f1);
+  width: 8em;
   border: none;
   border: 2px solid rgb(185, 185, 185);
   border-radius: 0.25em;
-  padding: 0.5em 0.8em;
+  padding: 0.5em 0;
   margin-left: 0.8em;
   cursor: pointer;
   transition: all 0.12s;
