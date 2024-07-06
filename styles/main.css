@@ -759,7 +759,7 @@ footer .links a:hover {
 }
 @media screen and (max-width: 1100px) {
   :root {
-    --fh: 8em;
+    --fh: 11em;
     --particles-js-bg-height: 500vh;
   }
   header {
