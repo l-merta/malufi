@@ -114,7 +114,7 @@ body *
   padding: 2em;
   position: fixed;
   bottom: 2vh;
-  right: 2vw;
+  left: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,11 +154,13 @@ body *
   {
     color: rgb(185, 185, 185);
     background: transparent;
-    font: 700 1.0em var(--f1);
-    border: 4px solid rgb(185, 185, 185);
+    font: 400 1.0em var(--f1);
+    border: none;
+    border: 2px solid rgb(185, 185, 185);
     border-radius: 0.25em;
     padding: 0.5em 0.8em;
     margin-left: 0.8em;
+    //text-decoration: underline;
     cursor: pointer;
     transition: all .12s;
   }
