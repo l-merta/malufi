@@ -1,0 +1,16 @@
+:root
+{
+  --c1: black;
+  --c2: white;
+  --c3: rgb(6, 36, 75);
+  --c4: rgb(63, 131, 209);
+  --c5: rgb(20, 20, 20);
+  --c6: rgba(63, 131, 209, 0.3);
+  --c7: rgb(241, 241, 245);
+  --f1: "Poppins";
+  --f2: "Oswald";
+  --hh: 6em;
+  --fh: 5em;
+  --particles-js-bg-height: 300vh;
+  --transition-scroll-effect: 0.04s;
+}
