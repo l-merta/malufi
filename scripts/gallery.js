@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let dirRight = true;
   let slideInterval;
 
-  showSlide(1);
+  showSlide(3);
   function showSlide(index) {
     const odlevahele = -(index-3) * 43.5; //width 38 + gap 5.5
     slides.forEach((slide, i) => {
