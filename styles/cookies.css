@@ -1,6 +1,8 @@
 body {
+  background-color: var(--c7);
   margin: 0;
   margin-top: calc(var(--hh) + 2em);
+  margin-bottom: 4em;
   display: flex;
   flex-direction: column;
   gap: 0em;
@@ -22,6 +24,7 @@ body {
 }
 .fileLink i {
   font-size: 130%;
+  text-decoration: none;
 }
 
 .souhlas {

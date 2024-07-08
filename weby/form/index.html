@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <script>
+    function submitPost(event) {
+      event.preventDefault();
+
+      var formData = new FormData(document.getElementById("postForm"));
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "index.php", true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          document.getElementById("message").innerHTML = xhr.responseText;
+          document.getElementById("postForm").reset();
+        }
+      };
+      xhr.send(formData);
+    }
+  </script>
+</head>
+<body>
+  <h1>Add Blog Post</h1>
+  <form id="postForm" onsubmit="submitPost(event)">
+    <label for="name">Meno:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <textarea name="email" required></textarea><br><br>
+
+    <input type="submit" value="Add Post">
+  </form>
+  <div id="message"></div>
+</body>
+</html>
