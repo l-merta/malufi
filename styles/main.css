@@ -655,10 +655,13 @@ main .aCont a:hover {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3em;
+  gap: 0.8em;
 }
 .cenik .cont .cena ul li {
   font: 300 1.2em var(--f1);
+}
+.cenik .cont .cena ul .list2 {
+  padding: 0;
 }
 .cenik .cont .cena .buttonCont {
   display: flex;
@@ -668,7 +671,7 @@ main .aCont a:hover {
   background-color: var(--c2);
   font: 500 1.4em var(--f1);
   border-radius: 0.25em;
-  margin-top: 4em;
+  margin-top: 2em;
   padding: 0.6em 0.9em;
   border: 2px solid var(--c1);
   transition: all 0.3s;
@@ -690,7 +693,6 @@ main .aCont a:hover {
 .cenik .cont .cena-pick button {
   background-color: var(--c4) !important;
   border: 2px solid transparent !important;
-  margin-top: 6em !important;
 }
 .cenik .cont .cena-pick button:hover {
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
