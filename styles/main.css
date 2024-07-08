@@ -810,6 +810,7 @@ footer .links a:hover {
   to {
     opacity: 0;
     transform: translateY(10em);
+    pointer-events: none;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -821,7 +822,7 @@ footer .links a:hover {
 @media screen and (max-width: 1100px) {
   :root {
     --fh: 11em;
-    --particles-js-bg-height: 500vh;
+    --particles-js-bg-height: 800vh;
   }
   .cookie {
     width: auto;

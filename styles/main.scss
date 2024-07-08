@@ -1010,6 +1010,7 @@ footer
   {
     opacity: 0;
     transform: translateY(10em);
+    pointer-events: none;
     //display: none;
   }
 }
@@ -1029,7 +1030,7 @@ footer
   :root
   {
     --fh: 11em;
-    --particles-js-bg-height: 500vh; //650vh;
+    --particles-js-bg-height: 800vh; //650vh;
   }
   .cookie
   {
