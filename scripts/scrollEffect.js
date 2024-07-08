@@ -14,8 +14,8 @@ function updateScrollEffect() {
   else {
     //kompl
     const scrollValue = window.scrollY;
-    pjsbg[0].style = "top: "+(scrollValue * -0.2)+"px;";
-    pjsbg[1].style = "top: "+(scrollValue * -0.2)+"px;";
+    pjsbg[0].style = "top: "+(scrollValue * -0.1)+"px;";
+    pjsbg[1].style = "top: "+(scrollValue * -0.1)+"px;";
   }
 }
 window.addEventListener('scroll', updateScrollEffect);

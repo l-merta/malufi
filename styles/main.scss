@@ -69,7 +69,7 @@ body *
   //z-index: 0;
 }
 #particles-js-bg-l {
-  position: absolute;
+  position: fixed;
   top: 95vh;
   width: 20%;
   height: var(--particles-js-bg-height);
@@ -78,7 +78,7 @@ body *
   transition: top var(--transition-scroll-effect);
 }
 #particles-js-bg-r {
-  position: absolute;
+  position: fixed;
   top: 95vh;
   width: 20%;
   left: 80%;

@@ -59,7 +59,7 @@ body * {
 }
 
 #particles-js-bg-l {
-  position: absolute;
+  position: fixed;
   top: 95vh;
   width: 20%;
   height: var(--particles-js-bg-height);
@@ -69,7 +69,7 @@ body * {
 }
 
 #particles-js-bg-r {
-  position: absolute;
+  position: fixed;
   top: 95vh;
   width: 20%;
   left: 80%;
