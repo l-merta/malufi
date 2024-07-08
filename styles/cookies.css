@@ -1,16 +1,9 @@
 body {
-  margin: 1em 2em;
+  margin: 0;
+  margin-top: calc(var(--hh) + 2em);
   display: flex;
   flex-direction: column;
   gap: 0em;
-}
-
-.homeLink {
-  color: var(--c1);
-  font: 600 1.6em var(--f1);
-  letter-spacing: 0.2em;
-  text-decoration: none;
-  margin-bottom: 1em;
 }
 
 .fileLink {
@@ -37,6 +30,10 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8em;
+}
+
+.cont {
+  padding: 0 2em;
 }
 
 .switch {

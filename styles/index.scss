@@ -1,0 +1,97 @@
+:root
+{
+  --c1: black;
+  --c2: white;
+  --c3: rgb(6, 36, 75);
+  --c4: rgb(63, 131, 209);
+  --c5: rgb(20, 20, 20);
+  --c6: rgba(63, 131, 209, 0.3);
+  --c7: rgb(241, 241, 245);
+  --f1: "Poppins";
+  --f2: "Oswald";
+  --hh: 6em;
+  --fh: 5em;
+  --particles-js-bg-height: 750vh;
+  --transition-scroll-effect: 0.0s;
+}
+header
+{
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  //mix-blend-mode: difference;
+  width: 100%;
+  height: var(--hh);
+  border-bottom: 1px solid rgba(122, 122, 122, 0.5);
+  padding: 0 16vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(10px);
+  transition: color .25s;
+  z-index: 100;
+
+  .name
+  {
+    color: inherit;
+    //mix-blend-mode: difference;
+    font: 600 1.6em var(--f1);
+    letter-spacing: 0.2em;
+    text-decoration: none;
+  }
+  nav
+  {
+    font: 700 1.1em var(--f1);
+    display: flex;
+    gap: 0.25em;
+
+    a
+    {
+      color: inherit;
+      //mix-blend-mode: difference;
+      border-radius: 0.25em;
+      padding: 0.7em 1.0em;
+      transition: all .12s;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a:hover
+    {
+      background-color: rgba(99, 99, 99, 0.1);
+    }
+    .spec
+    {
+      border: 2px solid var(--c2);
+      margin-left: 0.8em;
+      transition: all .3s;
+    }
+    .spec:hover
+    {
+      color: var(--c1);
+      background-color: var(--c4);
+      //mix-blend-mode: normal;
+      border: 2px solid transparent;
+      //padding: 1.3em 1.8em;
+      box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
+    }
+  }
+}
+.header-light
+{
+  color: var(--c1);
+
+  nav .spec
+  {
+    border-color: var(--c1);
+  }
+}
+.header-dark
+{
+  color: var(--c2);
+
+  nav .spec
+  {
+    border-color: var(--c2);
+  }
+}
