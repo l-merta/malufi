@@ -13,3 +13,27 @@ p, li
 {
   font: 500 1.0em var(--f1);
 }
+li
+{
+  margin: 0.5em 0;
+}
+table
+{
+  background-color: gray;
+  border-spacing: 1px;
+
+  td
+  {
+    background-color: var(--c7);
+    font: 500 1.0em var(--f1);
+    padding: 1em;
+    margin: 10px;
+  }
+  .colName
+  {
+    font-weight: 600;
+    border-bottom: 1px solid gray;
+    padding: 0.5em 1em;
+    margin: 0;
+  }
+}

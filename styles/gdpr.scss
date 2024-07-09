@@ -8,6 +8,27 @@ body
   flex-direction: column;
   gap: 0em;
 }
+.fileLink
+{
+  color: var(--c1);
+  background-color: whitesmoke;
+  font: 400 1.0em var(--f1);
+  width: fit-content;
+  border: 1px solid gray;
+  border-radius: 0.5em;
+  padding: 0.5em 0.8em;
+  //text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+
+  i
+  {
+    font-size: 130%;
+    text-decoration: none;
+  }
+}
 .cont
 {
   //width: 100%;
