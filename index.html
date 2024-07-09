@@ -29,6 +29,7 @@
   <script src="scripts/scrollEffect.js" defer></script>
   <script src="scripts/cookies.js" defer></script>
   <script src="scripts/form.js" defer></script>
+  <script src="scripts/handleForm.js" defer></script>
   <script src="scripts/particles.js" defer></script>
   <script src="scripts/app.js" defer></script>
 </head>
@@ -45,7 +46,7 @@
     <div class="vp">
       <button class="close" onclick="showForm(false, 1)"><i class="fa-solid fa-xmark"></i></button>
       <h1 class="header">Ještě krok. Napište.</h1>
-      <form onsubmit="">
+      <form id="kontakniFormular" onsubmit="">
         <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
         <input type="text" name="jmeno" required>
         <label for="email">E-mail <span class="povinne">*</span></label>
@@ -61,6 +62,7 @@
         <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
         <textarea name="popis" required></textarea>
         <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
+        <p id="errorMsg"></p>
         <input type="submit" value="Odeslat">
       </form>
     </div>
