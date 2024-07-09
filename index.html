@@ -42,27 +42,28 @@
     </div>
   </section>
   <div class="formCont">
-    <button class="close" onclick="showForm(false)"><i class="fa-solid fa-xmark"></i></button>
-    <h1 class="header">Ještě krok. Napište.</h1>
-    <form action="">
-      <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
-      <input type="text" name="jmeno">
-      <label for="email">E-mail <span class="povinne">*</span></label>
-      <input type="text" name="email">
-      <label for="telefon">Telefon</label>
-      <input type="text" name="telefon">
-      <label for="cena">Typ projektu <span class="povinne">*</span></label>
-      <input list="cena">
-      <datalist id="cena">
-        <option value="Standard">
-        <option value="Profesional">
-        <option value="Na míru">
-      </datalist>
-      <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
-      <textarea name="popis"></textarea>
-      <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
-      <input type="submit" value="Odeslat">
-    </form>
+    <div class="vp">
+      <button class="close" onclick="showForm(false, 1)"><i class="fa-solid fa-xmark"></i></button>
+      <h1 class="header">Ještě krok. Napište.</h1>
+      <form onsubmit="">
+        <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
+        <input type="text" name="jmeno" required>
+        <label for="email">E-mail <span class="povinne">*</span></label>
+        <input type="email" name="email" required>
+        <label for="telefon">Telefon</label>
+        <input type="text" name="telefon">
+        <label for="cena">Typ projektu <span class="povinne">*</span></label>
+        <select name="cena" required>
+          <option value="typ-0">Standard</option>
+          <option value="typ-1">Profesional</option>
+          <option value="typ-2">Na míru</option>
+        </select>
+        <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
+        <textarea name="popis" required></textarea>
+        <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
+        <input type="submit" value="Odeslat">
+      </form>
+    </div>
   </div>
   <header class="header-dark">
     <a href="#uvod" class="name">MALUFI</a>
@@ -70,7 +71,7 @@
       <a href="#portfolio">PORTFOLIO</a>
       <a href="#proc-my">PROČ MY</a>
       <a href="#kontakt">KONTAKT</a>
-      <a class="spec" onclick="showForm(true)">POPTAT WEB</a>
+      <a class="spec" onclick="showForm(true, 1)">POPTAT WEB</a>
     </nav>
   </header>
   <div id="particles-js"></div>
@@ -78,7 +79,7 @@
   <main>
     <p class="podslogan">Tvoříme weby na míru,</p>
     <p class="slogan">změníme Vaše podnikání.</p>
-    <div class="aCont"><a onclick="showForm(true)">NEZÁVAZNĚ POPTAT<span>weby od 8 990,-</span></a></div>
+    <div class="aCont"><a onclick="showForm(true, 1)">NEZÁVAZNĚ POPTAT<span>weby od 8 990,-</span></a></div>
   </main>
   <div id="particles-js-bg-l"></div>
   <div id="particles-js-bg-r"></div>
@@ -185,7 +186,7 @@
           <li>Nastavení responzivity pro všechna zařízení</li>
         </ul>
         <div class="buttonCont">
-          <button onclick="showForm(true)">Domluvme se</button>
+          <button onclick="showForm(true, 0)">Domluvme se</button>
         </div>
       </div>
       <div class="cena cena-pick">
@@ -201,7 +202,7 @@
           <li>Technická podpora</li>
         </ul>
         <div class="buttonCont">
-          <button onclick="showForm(true)">Domluvme se</button>
+          <button onclick="showForm(true, 1)">Domluvme se</button>
         </div>
       </div>
       <div class="cena">
@@ -224,7 +225,7 @@
           
         </ul>
         <div class="buttonCont">
-          <button onclick="showForm(true)">Domluvme se</button>
+          <button onclick="showForm(true, 2)">Domluvme se</button>
         </div>
       </div>
     </div>
@@ -233,7 +234,7 @@
     <a name="kontakt" class="anchor"></a>
     <div id="particles-js2"></div>
     <span class="slogan">Pojďme vytvořit <span>skvělý web.</span></span>
-    <button onclick="showForm(true)">NAPIŠTE NÁM</button>
+    <button onclick="showForm(true, 1)">NAPIŠTE NÁM</button>
     <span class="tel">NEBO VOLEJTE <span class="tel2">724 377 961</span></span>
   </section>
   <footer>
