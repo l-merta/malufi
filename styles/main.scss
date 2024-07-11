@@ -50,6 +50,7 @@ body *
   position: absolute;
   width: 100%;
   height: 95vh;
+  min-height: var(--main-mh);
   // background-color: #b61924;
   // background-image: url("");
   // background-repeat: no-repeat;
@@ -326,6 +327,7 @@ main
   // background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
   height: 95vh;
+  min-height: var(--main-mh);
   padding: calc(var(--hh) + 5vh) 0 0 16vw;
   position: relative;
   pointer-events: none;
@@ -353,7 +355,7 @@ main
   }
   .aCont
   {
-    height: 30vh;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -444,6 +446,8 @@ main
 
       span
       {
+        color: var(--c1);
+        background-color: transparent;
         font: 600 1.4em var(--f1);
       }
       .iconCont
@@ -486,6 +490,7 @@ main
 {
   width: 100%;
   height: 70vh;
+  min-height: var(--weby-mh);
   margin-bottom: 8em;
 
   .slides
@@ -659,7 +664,8 @@ main
       width: 25em;
       //min-width: 48.0%;
       //max-width: 48.0%;
-      height: 18em;
+      height: fit-content;
+      min-height: 18em;
       border: 1px solid rgb(201, 201, 201);
       border-radius: 0.5em;
       padding: 2em;
@@ -883,6 +889,7 @@ main
 
         button
         {
+          color: var(--c1);
           background-color: var(--c2);
           font: 500 1.4em var(--f1);
           border-radius: 0.25em;
@@ -936,6 +943,7 @@ main
   background: linear-gradient(90deg, rgba(22,44,54,1) 0%, rgba(17,29,34,1) 27%, rgba(15,24,28,1) 69%, rgba(19,25,46,1) 100%);
   width: 100%;
   height: calc(100vh - var(--fh));
+  min-height: var(--kontakt-mh);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -991,6 +999,7 @@ main
 
     .tel2
     {
+      color: var(--c2);
       font-weight: 500;
       pointer-events: all;
     }
@@ -1234,6 +1243,20 @@ main
     .header
     {
       margin-top: 2em;
+    }
+  }
+}
+@media screen and (max-width: 340px)
+{
+  .cookie
+  {
+    .buttons
+    {
+      .reject
+      {
+        margin-left: 0;
+        margin-top: 0.5em;
+      }
     }
   }
 }

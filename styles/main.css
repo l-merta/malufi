@@ -44,6 +44,7 @@ body * {
   position: absolute;
   width: 100%;
   height: 95vh;
+  min-height: var(--main-mh);
   background: rgb(22, 44, 54);
   background: linear-gradient(90deg, rgb(22, 44, 54) 0%, rgb(17, 29, 34) 27%, rgb(15, 24, 28) 69%, rgb(19, 25, 46) 100%);
   z-index: 0;
@@ -280,6 +281,7 @@ body * {
 main {
   width: 100%;
   height: 95vh;
+  min-height: var(--main-mh);
   padding: calc(var(--hh) + 5vh) 0 0 16vw;
   position: relative;
   pointer-events: none;
@@ -302,7 +304,7 @@ main .podslogan {
   margin-top: 1em;
 }
 main .aCont {
-  height: 30vh;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -377,6 +379,8 @@ main .aCont a:hover {
   gap: 1.5em !important;
 }
 .kontakt-mini .cont .info span {
+  color: var(--c1);
+  background-color: transparent;
   font: 600 1.4em var(--f1);
 }
 .kontakt-mini .cont .info .iconCont {
@@ -411,6 +415,7 @@ main .aCont a:hover {
 .weby {
   width: 100%;
   height: 70vh;
+  min-height: var(--weby-mh);
   margin-bottom: 8em;
 }
 .weby .slides {
@@ -552,7 +557,9 @@ main .aCont a:hover {
 .sluzby .cont .sluzba {
   background-color: var(--c2);
   width: 25em;
-  height: 18em;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 18em;
   border: 1px solid rgb(201, 201, 201);
   border-radius: 0.5em;
   padding: 2em;
@@ -724,6 +731,7 @@ main .aCont a:hover {
   justify-content: center;
 }
 .cenik .cont .cena .buttonCont button {
+  color: var(--c1);
   background-color: var(--c2);
   font: 500 1.4em var(--f1);
   border-radius: 0.25em;
@@ -760,6 +768,7 @@ main .aCont a:hover {
   background: linear-gradient(90deg, rgb(22, 44, 54) 0%, rgb(17, 29, 34) 27%, rgb(15, 24, 28) 69%, rgb(19, 25, 46) 100%);
   width: 100%;
   height: calc(100vh - var(--fh));
+  min-height: var(--kontakt-mh);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -807,6 +816,7 @@ main .aCont a:hover {
   z-index: 1;
 }
 .kontakt .tel .tel2 {
+  color: var(--c2);
   font-weight: 500;
   pointer-events: all;
 }
@@ -970,5 +980,11 @@ main .aCont a:hover {
 @media screen and (max-width: 600px) {
   .formCont .header {
     margin-top: 2em;
+  }
+}
+@media screen and (max-width: 340px) {
+  .cookie .buttons .reject {
+    margin-left: 0;
+    margin-top: 0.5em;
   }
 }/*# sourceMappingURL=main.css.map */
