@@ -31,7 +31,7 @@ try {
     $mail->Host       = 'mail.hostliner.cz';                    // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'info@malufi.cz';                       // SMTP username
-    $mail->Password   = '5puk7EiUzwP9';                         // SMTP password
+    $mail->Password   = '';                         // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            // Enable TLS encryption, `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
