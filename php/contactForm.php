@@ -4,6 +4,11 @@ require '../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
+
+// Load environment variables from .env file
+$dotenv = Dotenv::createImmutable('../');
+$dotenv->load();
 
 // Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -27,22 +32,23 @@ $mail = new PHPMailer(true);
 
 try {
     // Server settings
-    $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'mail.hostliner.cz';                    // Specify main and backup SMTP servers
-    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'info@malufi.cz';                       // SMTP username
-    $mail->Password   = '';                         // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            // Enable TLS encryption, `PHPMailer::ENCRYPTION_SMTPS` also accepted
-    $mail->Port       = 465;                                    // TCP port to connect to
+    $mail->isSMTP();                                          // Set mailer to use SMTP
+    $mail->Host       = $_ENV['SMTP_HOST'];                   // Specify main and backup SMTP servers
+    $mail->SMTPAuth   = true;                                 // Enable SMTP authentication
+    $mail->Username   = $_ENV['SMTP_USERNAME'];               // SMTP username
+    $mail->Password   = $_ENV['SMTP_PASSWORD'];               // SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          // Enable TLS encryption, `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = $_ENV['SMTP_PORT'];                   // TCP port to connect to
+    $mail->CharSet    = 'UTF-8';                              // Set charset to UTF-8
 
     // Recipients
     $mail->setFrom($email, 'MALUFI zákazník');
-    $mail->addAddress('info@malufi.cz', 'Recipient');
+    $mail->addAddress($_ENV['MAIL_TO'], 'Recipient');
 
     // Content
-    $mail->isHTML(true);                                        // Set email format to HTML
+    $mail->isHTML(true);
     $mail->Subject = 'Nový zákazník odeslal kontaktní formulář';
-    $mail->Body    = nl2br("Jméno: $name\nEmail: $email\Telefon: $phone\nCenový plán: $pricePlan\nZpráva: $message");
+    $mail->Body    = nl2br("Jméno: $name\nEmail: $email\nTelefon: $phone\nCenový plán: $pricePlan\nZpráva: $message");
 
     $mail->send();
     echo json_encode(['success' => true]);
