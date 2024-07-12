@@ -17,11 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Validate and sanitize input
-$name = isset($_POST['name']) ? htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8') : null;
+$name = isset($_POST['jmeno']) ? htmlspecialchars($_POST['jmeno'], ENT_QUOTES, 'UTF-8') : null;
 $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) : null;
-$phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone'], ENT_QUOTES, 'UTF-8') : null;
-$pricePlan = isset($_POST['pricePlan']) ? htmlspecialchars($_POST['pricePlan'], ENT_QUOTES, 'UTF-8') : null;
-$message = isset($_POST['message']) ? htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8') : null;
+$phone = isset($_POST['telefon']) ? htmlspecialchars($_POST['telefon'], ENT_QUOTES, 'UTF-8') : null;
+$pricePlan = isset($_POST['cena']) ? htmlspecialchars($_POST['cena'], ENT_QUOTES, 'UTF-8') : null;
+$message = isset($_POST['popis']) ? htmlspecialchars($_POST['popis'], ENT_QUOTES, 'UTF-8') : null;
 
 if (!$name || !$email || !$pricePlan || !$message) {
     echo json_encode(['success' => false, 'error' => 'Data z formuláře nejsou validní. Vyplňte prostím všechna povinná pole.']);
