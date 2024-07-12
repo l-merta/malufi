@@ -26,5 +26,7 @@ kontaktniFormular.addEventListener("submit", function (event) {
 });
 
 function handleSuccess() {
-  console.log("success!");
+  console.log("success!"); //smazat
+  errorMsg.innerText = "odeslano!"; //smazat
+  errorMsg.style.display = "block"; //smazat
 }
