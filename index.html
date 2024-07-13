@@ -61,19 +61,19 @@
       <form id="kontakniFormular" onsubmit="">
         <div class="formInner">
           <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
-          <input type="text" name="jmeno" required>
+          <input type="text" name="jmeno" id="jmeno" autocomplete="name" required>
           <label for="email">E-mail <span class="povinne">*</span></label>
-          <input type="email" name="email" required>
+          <input type="email" name="email" id="email" autocomplete="email" required>
           <label for="telefon">Telefon</label>
-          <input type="text" name="telefon">
+          <input type="text" name="telefon" id="telefon" autocomplete="tel">
           <label for="cena">Typ projektu <span class="povinne">*</span></label>
-          <select name="cena" required>
+          <select name="cena" id="cena" required>
             <option value="Standard">Standard</option>
             <option value="Profesional">Profesional</option>
             <option value="Na míru">Na míru</option>
           </select>
           <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
-          <textarea name="popis" required></textarea>
+          <textarea name="popis" id="popis" required></textarea>
           <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
           <p id="errorMsg"></p>
           <div class="submitCont">
