@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const consentBanner = document.querySelector(".cookie");
-  const cookieCheckbox = document.querySelector("cookie-checkbox");
+  const consentBanner = document.querySelector("#cookie-banner");
+  const cookieCheckbox = document.querySelector("#cookie-checkbox");
 
   // Function to accept cookies
   window.zapnoutCookie = function () {
@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check if user has already given consent
   if (getCookie("userConsent")) {
-    if (consentBanner) {
-      consentBanner.classList = "cookie cookie-close";
-    }
     if (cookieCheckbox) {
       cookieCheckbox.checked = true;
     }
   } else {
+    if (consentBanner) {
+      consentBanner.classList = "cookie";
+    }
     if (cookieCheckbox) {
       cookieCheckbox.checked = false;
     }

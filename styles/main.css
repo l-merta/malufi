@@ -80,7 +80,11 @@ body * {
   transition: top var(--transition-scroll-effect);
 }
 
-/* cookes */
+/* cookies */
+.schovany-cookies {
+  display: none;
+}
+
 .cookie {
   color: var(--c2);
   background-color: rgb(11, 13, 14);
