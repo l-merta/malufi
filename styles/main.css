@@ -84,15 +84,15 @@ body * {
 .cookie {
   color: var(--c2);
   background-color: rgb(11, 13, 14);
-  width: 25em !important;
+  width: 25em;
   border-radius: 0.5em;
   padding: 2em;
   position: fixed;
-  bottom: 2vh !important;
-  right: 2vw !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
+  bottom: 2vh;
+  right: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 100;
   opacity: 0;
   animation: cookieAppear 0.5s 1s ease forwards;
@@ -206,12 +206,20 @@ body * {
   margin-top: 0;
 }
 .formCont .vp .successCont .success button {
+  color: var(--c1);
+  background-color: var(--c4);
   font: 700 1em var(--f1);
   width: 70%;
-  border: 4px solid var(--c1);
+  border: 4px solid transparent;
   border-radius: 0.5em;
   padding: 0.7em 0;
+  transition: all 0.12s;
   cursor: pointer;
+}
+.formCont .vp .successCont .success button:hover {
+  background-color: transparent;
+  border: 4.5px solid var(--c1);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
 }
 .formCont .header {
   color: white;
