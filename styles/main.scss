@@ -194,7 +194,6 @@ body * {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
       bottom: 0;
       pointer-events: none;
 
@@ -216,7 +215,7 @@ body * {
         text-align: center;
         overflow: hidden;
         transition: all 0.2s;
-        pointer-events: all;
+        pointer-events: none;
 
         p {
           margin-top: 0;
@@ -401,6 +400,10 @@ body * {
 }
 .formCont-appear {
   animation: formAppear 1s 0s ease forwards;
+
+  .success {
+    pointer-events: all !important;
+  }
 }
 .formCont-close {
   animation: formHide 1s 0s ease forwards;
@@ -520,10 +523,15 @@ main {
       align-items: center;
       gap: 1.5em !important;
 
-      span {
+      a {
         color: var(--c1);
         background-color: transparent;
         font: 600 1.4em var(--f1);
+        width: fit-content;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
       }
       .iconCont {
         color: var(--c2);
