@@ -100,16 +100,16 @@ body * {
 .cookie {
   color: var(--c2);
   background-color: rgb(11, 13, 14);
-  width: 25em;
+  width: 25em !important;
   //height: 16em;
   border-radius: 0.5em;
   padding: 2em;
   position: fixed;
-  bottom: 2vh;
-  right: 2vw;
+  bottom: 2vh !important;
+  right: 2vw !important;
   display: flex !important;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column !important;
+  justify-content: center !important;
   z-index: 100;
   opacity: 1;
   animation: cookieAppear 0.5s 1s ease forwards;
