@@ -3,14 +3,18 @@ const errorMsg = document.querySelector("#errorMsg");
 
 kontaktniFormular.addEventListener("submit", function (event) {
   event.preventDefault();
-  if(document.querySelector(".submitCont").classList.contains("submitCont-load"))
+  if (
+    document.querySelector(".submitCont").classList.contains("submitCont-load")
+  )
     return;
 
   const formData = new FormData(kontaktniFormular);
   errorMsg.innerText = "";
   //
   kontaktniFormular.querySelector(".submit").value = "";
-  kontaktniFormular.querySelector(".submitCont").classList.add("submitCont-load");
+  kontaktniFormular
+    .querySelector(".submitCont")
+    .classList.add("submitCont-load");
   //
 
   fetch("php/contactForm.php", {
@@ -32,9 +36,11 @@ kontaktniFormular.addEventListener("submit", function (event) {
 
 function handleSuccess() {
   //event.preventDefault();
-  document.querySelector(".formCont").classList.add("formCont-sent")
+  document.querySelector(".formCont").classList.add("formCont-sent");
   kontaktniFormular.querySelector(".submit").value = "Odeslat";
-  kontaktniFormular.querySelector(".submitCont").classList.remove("submitCont-load");
+  kontaktniFormular
+    .querySelector(".submitCont")
+    .classList.remove("submitCont-load");
 }
 function handleError(errMsg) {
   //event.preventDefault();
@@ -42,5 +48,7 @@ function handleError(errMsg) {
   errorMsg.innerText = "Chyba, zkuste to znovu.";
   errorMsg.style.display = "block";
   kontaktniFormular.querySelector(".submit").value = "Odeslat";
-  kontaktniFormular.querySelector(".submitCont").classList.remove("submitCont-load");
+  kontaktniFormular
+    .querySelector(".submitCont")
+    .classList.remove("submitCont-load");
 }
