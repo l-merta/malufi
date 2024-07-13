@@ -982,7 +982,7 @@ main .aCont a:hover {
     --particles-js-bg-height: 800vh;
   }
   .cookie {
-    width: auto;
+    width: 100%;
     bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
