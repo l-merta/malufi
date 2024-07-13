@@ -81,10 +81,6 @@ body * {
 }
 
 /* cookies */
-#cookie-banner {
-  display: inline;
-}
-
 .schovany-cookies {
   display: none;
 }
