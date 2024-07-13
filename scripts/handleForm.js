@@ -34,3 +34,4 @@ function handleSuccess() {
 function handleError() {
   console.log("error");
 }
+console.log("test");
