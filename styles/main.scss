@@ -94,6 +94,9 @@ body * {
 }
 
 /* cookies */
+#cookie-banner {
+  display: inline;
+}
 .schovany-cookies {
   display: none;
 }
@@ -111,7 +114,7 @@ body * {
   flex-direction: column !important;
   justify-content: center !important;
   z-index: 100;
-  opacity: 1;
+  opacity: 0;
   animation: cookieAppear 0.5s 1s ease forwards;
 
   i {
