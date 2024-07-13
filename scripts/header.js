@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function calculateColorChange(mainElement) {
     //return mainElement.scrollHeight - (window.innerHeight * 0.15) - (3 * 16);
     //element.height - usek úsek ze spod - polovina header
-    return mainElement - (3 * 16) - 100; //-100 protože nevim
+    return mainElement - (3 * 16) - 0; //-100 protože nevim
   }
 
   function handleScroll(headerElement, colorChange) { //threshold
