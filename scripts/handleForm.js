@@ -14,24 +14,21 @@ kontaktniFormular.addEventListener("submit", function (event) {
       if (data.success) {
         handleSuccess();
       } else {
-        errorMsg.innerText = "Chyba: " + data.error;
-        errorMsg.style.display = "block";
+        handleError(data.error);
       }
     })
     .catch((error) => {
-      console.error("Error:", error.message);
-      errorMsg.innerText = "Chyba, zkuste to znovu.";
-      errorMsg.style.display = "block";
+      handleError(error.message);
     });
 });
 
 function handleSuccess() {
-  console.log("success!"); //smazat, smazat
-  errorMsg.innerText = "odeslano!"; //smazat
-  errorMsg.style.display = "block"; //smazat
+  console.log("success!");
+  errorMsg.innerText = "odeslano!";
+  errorMsg.style.display = "block";
 }
-
-function handleError() {
-  console.log("error");
+function handleError(errMsg) {
+  console.error("Error:", errMsg);
+  errorMsg.innerText = "Chyba, zkuste to znovu.";
+  errorMsg.style.display = "block";
 }
-console.log("test");
