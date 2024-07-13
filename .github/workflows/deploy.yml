@@ -27,7 +27,3 @@ jobs:
             README.md
             *.yml
             *.yaml
-            - name: Confirm deployment
-    - name: Confirm deployment
-      run: |
-        echo "Deployment step completed"
