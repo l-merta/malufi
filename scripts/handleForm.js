@@ -2,6 +2,7 @@ const kontaktniFormular = document.querySelector("#kontakniFormular");
 const errorMsg = document.querySelector("#errorMsg");
 
 kontaktniFormular.addEventListener("submit", function (event) {
+  return;
   event.preventDefault();
   const formData = new FormData(kontaktniFormular);
 
@@ -23,11 +24,13 @@ kontaktniFormular.addEventListener("submit", function (event) {
 });
 
 function handleSuccess() {
+  event.preventDefault();
   console.log("success!");
   errorMsg.innerText = "odeslano!";
   errorMsg.style.display = "block";
 }
 function handleError(errMsg) {
+  event.preventDefault();
   console.error("Error:", errMsg);
   errorMsg.innerText = "Chyba, zkuste to znovu.";
   errorMsg.style.display = "block";

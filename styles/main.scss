@@ -204,7 +204,45 @@ body *
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
+    .formInner
+    {
+      //opacity: 1;
+      transition: all .2s;
+    }
+    .success
+    {
+      opacity: 0;
+      font: 600 1.5em var(--f1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      bottom: 0;
+      text-align: center;
+      overflow: hidden;
+      transition: all .2s;
+
+      p
+      {
+        margin-top: 0;
+      }
+      button
+      {
+        font: 700 1.0em var(--f1);
+        width: 70%;
+        border: 4px solid var(--c1);
+        border-radius: 0.5em;
+        padding: 0.7em 0;
+        cursor: pointer;
+      }
+    }
     label
     {
       font: 500 1.0em var(--f1);
@@ -280,6 +318,18 @@ body *
     {
       background: transparent;
       border: 4px solid black;
+    }
+  }
+  .formSent
+  {
+    height: 20em;
+    .formInner
+    {
+      opacity: 0;
+    }
+    .success
+    {
+      opacity: 1;
     }
   }
   .close

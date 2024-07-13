@@ -56,24 +56,30 @@
     <div class="vp">
       <button class="close" onclick="showForm(false, 1)"><i class="fa-solid fa-xmark"></i></button>
       <h1 class="header">Ještě krok. Napište.</h1>
-      <form id="kontakniFormular" onsubmit="">
-        <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
-        <input type="text" name="jmeno" required>
-        <label for="email">E-mail <span class="povinne">*</span></label>
-        <input type="email" name="email" required>
-        <label for="telefon">Telefon</label>
-        <input type="text" name="telefon">
-        <label for="cena">Typ projektu <span class="povinne">*</span></label>
-        <select name="cena" required>
-          <option value="typ-0">Standard</option>
-          <option value="typ-1">Profesional</option>
-          <option value="typ-2">Na míru</option>
-        </select>
-        <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
-        <textarea name="popis" required></textarea>
-        <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
-        <p id="errorMsg"></p>
-        <input type="submit" value="Odeslat">
+      <form class="formSent" id="kontakniFormular" onsubmit="handleSuccess()">
+        <div class="formInner">
+          <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
+          <input type="text" name="jmeno" required>
+          <label for="email">E-mail <span class="povinne">*</span></label>
+          <input type="email" name="email" required>
+          <label for="telefon">Telefon</label>
+          <input type="text" name="telefon">
+          <label for="cena">Typ projektu <span class="povinne">*</span></label>
+          <select name="cena" required>
+            <option value="Standard">Standard</option>
+            <option value="Profesional">Profesional</option>
+            <option value="Na míru">Na míru</option>
+          </select>
+          <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
+          <textarea name="popis" required></textarea>
+          <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
+          <p id="errorMsg"></p>
+          <input type="submit" value="Odeslat">
+        </div>
+        <div class="success">
+          <p>Formulář byl odeslán do hlavní ústředny Malufi!</p>
+          <button>Dobře 👍🏼</button>
+        </div>
       </form>
     </div>
   </div>
@@ -225,14 +231,6 @@
           <li>Další prvky na míru: </li>
           <ul class="list2">
             <li>E-shop, kontaktní formulář, rezervační systém, fotogalerie, jazykové verze, blog, aktuality, redakční systém...</li>
-            <!-- <li>E-shop</li>
-            <li>kontaktní formulář</li>
-            <li>Rezervační systém</li>
-            <li>Fotogalerie</li>
-            <li>Jazykové verze</li>
-            <li>Blog, aktuality</li>
-            <li>Redakční systém</li>
-            <li>Cokoliv dalšího</li> -->
           </ul>
           
         </ul>
