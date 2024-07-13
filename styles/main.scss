@@ -111,7 +111,7 @@ body * {
   flex-direction: column;
   justify-content: center;
   z-index: 100;
-  opacity: 0;
+  opacity: 1;
   animation: cookieAppear 0.5s 1s ease forwards;
 
   i {
