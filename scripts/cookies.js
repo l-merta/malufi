@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const consentBanner = document.querySelector("#cookies-banner");
+  const consentBanner = document.querySelector(".cookie-schovany");
   const cookieCheckbox = document.querySelector("#cookie-checkbox");
 
   // Function to accept cookies
