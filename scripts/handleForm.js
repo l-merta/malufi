@@ -30,3 +30,7 @@ function handleSuccess() {
   errorMsg.innerText = "odeslano!"; //smazat
   errorMsg.style.display = "block"; //smazat
 }
+
+function handleError() {
+  console.log("error");
+}
