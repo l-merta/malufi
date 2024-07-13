@@ -94,7 +94,7 @@ body * {
   position: fixed;
   bottom: 2vh;
   right: 2vw;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   z-index: 100;
