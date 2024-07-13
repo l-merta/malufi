@@ -56,7 +56,7 @@
     <div class="vp">
       <button class="close" onclick="showForm(false, 1)"><i class="fa-solid fa-xmark"></i></button>
       <h1 class="header">Ještě krok. Napište.</h1>
-      <form class="formSent" id="kontakniFormular" onsubmit="handleSuccess()">
+      <form id="kontakniFormular" onsubmit="">
         <div class="formInner">
           <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
           <input type="text" name="jmeno" required>
@@ -76,11 +76,13 @@
           <p id="errorMsg"></p>
           <input type="submit" value="Odeslat">
         </div>
+      </form>
+      <div class="successCont">
         <div class="success">
           <p>Formulář byl odeslán do hlavní ústředny Malufi!</p>
-          <button>Dobře 👍🏼</button>
+          <button onclick="showForm(false, 1)">Dobře 👍🏼</button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
   <header class="header-dark">

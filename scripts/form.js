@@ -2,10 +2,12 @@ const formCont = document.querySelector(".formCont");
 
 function showForm(state, typ) {
   if(state) {
-    formCont.classList = "formCont formCont-appear";
+    formCont.classList.add("formCont-appear");
+    formCont.classList.remove("formCont-close");
   }
   else {
-    formCont.classList = "formCont formCont-close";
+    formCont.classList.add("formCont-close");
+    formCont.classList.remove("formCont-appear");
   }
   //
   const options = formCont.querySelectorAll("form option");

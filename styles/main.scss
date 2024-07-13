@@ -179,13 +179,65 @@ body *
   .vp
   {
     width: 100%;
+    min-height: 100vh;
     max-height: 100%;
     padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    .successCont
+    {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+
+      .success
+      {
+        background-color: whitesmoke;
+        opacity: 1;
+        font: 600 1.5em var(--f1);
+        width: 20em;
+        max-width: 95vw;
+        height: 0em;
+        border-radius: 0.5em;
+        //padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        position: absolute;
+        text-align: center;
+        overflow: hidden;
+        transition: all .2s;
+        pointer-events: all;
+
+        p
+        {
+          margin-top: 0;
+        }
+        button
+        {
+          font: 700 1.0em var(--f1);
+          width: 70%;
+          border: 4px solid var(--c1);
+          border-radius: 0.5em;
+          padding: 0.7em 0;
+          cursor: pointer;
+        }
+      }
+    }
   }
   .header
   {
@@ -198,50 +250,22 @@ body *
     background-color: whitesmoke;
     width: 30em;
     max-width: 95%;
-    border: 1px solid rgb(202, 202, 202);
+    //border: 1px solid rgb(202, 202, 202);
     border-radius: 0.5em;
     padding: 1.5em 2.0em;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    transition: all 0.3s;
+    //overflow: hidden;
 
     .formInner
     {
       //opacity: 1;
-      transition: all .2s;
-    }
-    .success
-    {
-      opacity: 0;
-      font: 600 1.5em var(--f1);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5em;
-      position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      bottom: 0;
-      text-align: center;
+      padding: 0 2px;
       overflow: hidden;
       transition: all .2s;
-
-      p
-      {
-        margin-top: 0;
-      }
-      button
-      {
-        font: 700 1.0em var(--f1);
-        width: 70%;
-        border: 4px solid var(--c1);
-        border-radius: 0.5em;
-        padding: 0.7em 0;
-        cursor: pointer;
-      }
     }
     label
     {
@@ -319,19 +343,15 @@ body *
       background: transparent;
       border: 4px solid black;
     }
-  }
-  .formSent
-  {
-    height: 20em;
-    .formInner
+    #errorMsg
     {
-      opacity: 0;
-    }
-    .success
-    {
-      opacity: 1;
+      color: red;
+      opacity: 0.7;
+      font: 700 1.0em var(--f1);
+      margin: 1.0em 0;
     }
   }
+  
   .close
   {
     color: white;
@@ -359,6 +379,24 @@ body *
   .close:hover
   {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.formCont-sent
+{
+  form
+  {
+    opacity: 0;
+    //height: 0;
+    //padding: 0;
+
+    .formInner
+    {
+      //height: 0;
+    }
+  }
+  .success
+  {
+    height: 10em !important;
   }
 }
 .formCont-appear
