@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to hide the cookie banner
   window.showCookie = function (state) {
+    console.log(state);
     if (consentBanner) {
       if (state) consentBanner.classList = "cookie";
       else consentBanner.classList = "cookie cookie-close";
