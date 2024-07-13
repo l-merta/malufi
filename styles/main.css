@@ -983,9 +983,9 @@ main .aCont a:hover {
   }
   .cookie {
     width: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
