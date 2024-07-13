@@ -329,6 +329,20 @@ body *
         color: inherit;
       }
     }
+    .submitCont
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .submitCont-load
+    {
+      .loadIcon
+      {
+        opacity: 1;
+      }
+    }
     input[type="submit"]
     {
       color: var(--c1);
@@ -342,6 +356,15 @@ body *
     {
       background: transparent;
       border: 4px solid black;
+    }
+    .loadIcon
+    {
+      opacity: 0;
+      scale: 0.8;
+      margin-bottom: 1.0em;
+      position: absolute;
+      pointer-events: none;
+      transition: all .12s;
     }
     #errorMsg
     {

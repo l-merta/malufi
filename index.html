@@ -41,6 +41,8 @@
   <script src="scripts/handleForm.js" defer></script>
   <script src="scripts/particles.js" defer></script>
   <script src="scripts/app.js" defer></script>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/squircle.js"></script>
 </head>
 <body>
   <p class="disabled">Schovanej text tohle je vončo</p>
@@ -74,7 +76,17 @@
           <textarea name="popis" required></textarea>
           <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
           <p id="errorMsg"></p>
-          <input type="submit" value="Odeslat">
+          <div class="submitCont">
+            <input class="submit" type="submit" value="Odeslat">
+            <l-squircle
+              size="37"
+              stroke="10"
+              stroke-length="0.15"
+              bg-opacity="0.1"
+              speed="0.6"
+              color="rgb(11,5,97)" 
+            class="loadIcon loadIcon"></l-squircle>
+          </div>
         </div>
       </form>
       <div class="successCont">
