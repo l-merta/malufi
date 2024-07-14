@@ -46,57 +46,6 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/squircle.js"></script>
 </head>
 <body>
-  <section id="" class="cookie-schovany">
-    <i class="fa-light fa-cookie-bite"></i>
-    <p>Naše webové stránky používají cookies pro analytické účely. Souhlasíte s používáním cookies? <a href="cookies.html">Správa souhlasu s cookies</a></p>
-    <div class="buttons">
-      <button class="accept" onclick="zapnoutCookie(); showCookie(false)">Přijmout</button>
-      <button class="reject" onclick="showCookie(false)">Odmítnout</button>
-    </div>
-  </section>
-  <div class="formCont">
-    <div class="vp">
-      <button class="close" onclick="showForm(false, 1)"><i class="fa-solid fa-xmark"></i></button>
-      <h1 class="header">Ještě krok. Napište.</h1>
-      <form id="kontakniFormular" onsubmit="">
-        <div class="formInner">
-          <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
-          <input type="text" name="jmeno" id="jmeno" autocomplete="name" required>
-          <label for="email">E-mail <span class="povinne">*</span></label>
-          <input type="email" name="email" id="email" autocomplete="email" required>
-          <label for="telefon">Telefon</label>
-          <input type="text" name="telefon" id="telefon" autocomplete="tel">
-          <label for="cena">Typ projektu <span class="povinne">*</span></label>
-          <select name="cena" id="cena" required>
-            <option value="Standard">Standard</option>
-            <option value="Profesional">Profesional</option>
-            <option value="Na míru">Na míru</option>
-          </select>
-          <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
-          <textarea name="popis" id="popis" required></textarea>
-          <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
-          <p id="errorMsg"></p>
-          <div class="submitCont">
-            <input class="submit" type="submit" value="Odeslat">
-            <l-squircle
-              size="37"
-              stroke="10"
-              stroke-length="0.15"
-              bg-opacity="0.1"
-              speed="0.6"
-              color="rgb(11,5,97)" 
-            class="loadIcon loadIcon"></l-squircle>
-          </div>
-        </div>
-      </form>
-      <div class="successCont">
-        <div class="success">
-          <p>Formulář byl odeslán do hlavní ústředny Malufi!</p>
-          <button onclick="showForm(false, 1)">Dobře 👍🏼</button>
-        </div>
-      </div>
-    </div>
-  </div>
   <header class="header-dark">
     <a href="#uvod" class="name">MALUFI</a>
     <nav>
@@ -273,5 +222,56 @@
       <a href="cookies.html">COOKIES</a>
     </div>
   </footer>
+  <section id="" class="cookie-schovany">
+    <i class="fa-light fa-cookie-bite"></i>
+    <p>Naše webové stránky používají cookies pro analytické účely. Souhlasíte s používáním cookies? <a href="cookies.html">Správa souhlasu s cookies</a></p>
+    <div class="buttons">
+      <button class="accept" onclick="zapnoutCookie(); showCookie(false)">Přijmout</button>
+      <button class="reject" onclick="showCookie(false)">Odmítnout</button>
+    </div>
+  </section>
+  <div class="formCont">
+    <div class="vp">
+      <button class="close" onclick="showForm(false, 1)"><i class="fa-solid fa-xmark"></i></button>
+      <h1 class="header">Ještě krok. Napište.</h1>
+      <form id="kontakniFormular" onsubmit="">
+        <div class="formInner">
+          <label for="jmeno">Jméno a příjmení <span class="povinne">*</span></label>
+          <input type="text" name="jmeno" id="jmeno" autocomplete="name" required>
+          <label for="email">E-mail <span class="povinne">*</span></label>
+          <input type="email" name="email" id="email" autocomplete="email" required>
+          <label for="telefon">Telefon</label>
+          <input type="text" name="telefon" id="telefon" autocomplete="tel">
+          <label for="cena">Typ projektu <span class="povinne">*</span></label>
+          <select name="cena" id="cena" required>
+            <option value="Standard">Standard</option>
+            <option value="Profesional">Profesional</option>
+            <option value="Na míru">Na míru</option>
+          </select>
+          <label for="popis">Napište více o Vašem projektu <span class="povinne">*</span></label>
+          <textarea name="popis" id="popis" required></textarea>
+          <span class="gdpr">Odesláním souhlasíte se zpracováním <a href="gdpr.html">osobních údajů.</a></span>
+          <p id="errorMsg"></p>
+          <div class="submitCont">
+            <input class="submit" type="submit" value="Odeslat">
+            <l-squircle
+              size="37"
+              stroke="10"
+              stroke-length="0.15"
+              bg-opacity="0.1"
+              speed="0.6"
+              color="rgb(11,5,97)" 
+            class="loadIcon loadIcon"></l-squircle>
+          </div>
+        </div>
+      </form>
+      <div class="successCont">
+        <div class="success">
+          <p>Formulář byl odeslán do hlavní ústředny Malufi!</p>
+          <button onclick="showForm(false, 1)">Dobře 👍🏼</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
