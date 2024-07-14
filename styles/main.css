@@ -778,14 +778,14 @@ main .aCont a:hover {
   transition: scale 0.12s;
   z-index: 10;
 }
-.cenik .cont .cena h2 {
+.cenik .cont .cena h3 {
   color: var(--c1);
   font: 400 1.6em var(--f1);
   margin: 0;
   margin-top: -0.5em;
   text-align: center;
 }
-.cenik .cont .cena h3 {
+.cenik .cont .cena h4 {
   color: var(--c1);
   font: 700 2.6em var(--f1);
   padding-top: 0.3em;
@@ -795,12 +795,12 @@ main .aCont a:hover {
   position: relative;
   text-align: center;
 }
-.cenik .cont .cena h3 .light {
+.cenik .cont .cena h4 .light {
   font-size: 0.7em;
   font-weight: 400;
   margin-right: 0.2em;
 }
-.cenik .cont .cena h3 .lineCont {
+.cenik .cont .cena h4 .lineCont {
   width: 100%;
   height: 2px;
   position: absolute;
@@ -808,7 +808,7 @@ main .aCont a:hover {
   display: flex;
   justify-content: center;
 }
-.cenik .cont .cena h3 .lineCont .line {
+.cenik .cont .cena h4 .lineCont .line {
   background-color: rgb(202, 202, 202);
   width: 80%;
   height: 100%;
