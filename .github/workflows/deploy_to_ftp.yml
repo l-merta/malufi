@@ -1,4 +1,4 @@
-name: FTP Deploy
+name: Deploy to FTP Server
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: FTP Deploy
+      - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: ${{ secrets.FTP_SERVER }}
