@@ -1,0 +1,8 @@
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+Sitemap: https://malufi.cz/sitemap.xml
+# ---------------------------
+# END YOAST BLOCK
