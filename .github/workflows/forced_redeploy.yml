@@ -1,0 +1,43 @@
+name: FTP Deploy
+
+on:
+  push:
+    branches:
+      - main # or the branch you want to deploy from
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: List files in working directory
+        run: ls -la
+
+      - name: Clean FTP Directory
+        run: |
+          echo "Cleaning FTP directory..."
+          curl -u ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_SERVER }}/data/public_html/ -Q "-DELE"  # Delete files
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /data/public_html/
+          exclude: |
+            .git*
+            .github/*
+            README.md
+            *.yml
+            *.yaml
+          force: true # Force re-upload all files
+          verbose: true # Enable verbose logging
+
+      - name: Confirm deployment
+        run: |
+          echo "Deployment step completed"
