@@ -17,10 +17,10 @@ const webColors = [
 ]
 const links = [
   "https://pianatom.cz",
-  "https://l-merta.github.io/weby/fitnessKolin",
+  "https://l-merta.github.io/portfolio/weby/fitnessKolin",
   "https://icpdame.com",
   "http://krystofvinklar.cz",
-  "https://l-merta.github.io/weby/prekladatelka"
+  "https://l-merta.github.io/portfolio/weby/prekladatelka"
 ];
 ///
 
