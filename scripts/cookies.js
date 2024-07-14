@@ -9,15 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check if user has already given consent
   if (getCookie("userConsent")) {
-    console.log("jsou cookies");
     if (cookieCheckbox) {
       cookieCheckbox.checked = true;
     }
   } else {
-    console.log("nejsou cookies");
     if (consentBanner) {
       consentBanner.classList = "cookie";
-      console.log(consentBanner.classList);
     }
     if (cookieCheckbox) {
       cookieCheckbox.checked = false;
@@ -34,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to hide the cookie banner
   window.showCookie = function (state) {
-    console.log(state);
     if (consentBanner) {
       if (state) consentBanner.classList = "cookie";
       else consentBanner.classList = "cookie cookie-close";
