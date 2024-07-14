@@ -1,516 +1,131 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
-
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
-
-/* Otherwise just put the config content (json): */
-
-particlesJS('particles-js',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 60,
-        "density": {
-          "enable": true,
-          "value_area": 700
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
+function createParticlesConfig(
+  particlesId,
+  numberValue,
+  valueArea,
+  colorValue,
+  sizeValue,
+  speedValue,
+  repulseDistance
+) {
+  particlesJS(particlesId, {
+    particles: {
+      number: {
+        value: numberValue,
+        density: {
+          enable: true,
+          value_area: valueArea,
         },
-        "polygon": {
-          "nb_sides": 5
+      },
+      color: {
+        value: colorValue,
+      },
+      shape: {
+        type: "circle",
+        stroke: {
+          width: 0,
+          color: "#000000",
         },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
+        polygon: {
+          nb_sides: 5,
+        },
+        image: {
+          src: "img/github.svg",
+          width: 100,
+          height: 100,
+        },
       },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
+      opacity: {
+        value: 0.5,
+        random: false,
+        anim: {
+          enable: false,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false,
+        },
       },
-      "size": {
-        "value": 4,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
+      size: {
+        value: sizeValue,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 40,
+          size_min: 0.1,
+          sync: false,
+        },
       },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: colorValue,
+        opacity: 0.4,
+        width: 1,
       },
-      "move": {
-        "enable": true,
-        "speed": 0.2,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
+      move: {
+        enable: true,
+        speed: speedValue,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200,
+        },
+      },
     },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "grab",
         },
-        "onclick": {
-          "enable": true,
-          "mode": "repulse"
+        onclick: {
+          enable: true,
+          mode: "repulse",
         },
-        "resize": true
+        resize: true,
       },
-      "modes": {
-        "grab": {
-          "distance": 150,
-          "line_linked": {
-            "opacity": 1
-          }
+      modes: {
+        grab: {
+          distance: 150,
+          line_linked: {
+            opacity: 1,
+          },
         },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
+        bubble: {
+          distance: 400,
+          size: 40,
+          duration: 2,
+          opacity: 8,
+          speed: 3,
         },
-        "repulse": {
-          "distance": 400
+        repulse: {
+          distance: repulseDistance,
         },
-        "push": {
-          "particles_nb": 4
+        push: {
+          particles_nb: 4,
         },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
+        remove: {
+          particles_nb: 2,
+        },
+      },
     },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
-  }
-
-);
-
-
-
-
-particlesJS('particles-js2',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 60,
-        "density": {
-          "enable": true,
-          "value_area": 700
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 2,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 0.2,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
+    retina_detect: true,
+    config_demo: {
+      hide_card: false,
+      background_color: "#b61924",
+      background_image: "",
+      background_position: "50% 50%",
+      background_repeat: "no-repeat",
+      background_size: "cover",
     },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 150,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
-  }
+  });
+}
 
-);
-
-
-
-
-
-
-
-
-
-
-
-
-particlesJS('particles-js-bg-l',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 300
-        }
-      },
-      "color": {
-        "value": "#000000"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 2,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#000000",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 0.15,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 150,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
-  }
-
-);
-
-
-
-
-
-
-
-particlesJS('particles-js-bg-r',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 300
-        }
-      },
-      "color": {
-        "value": "#000000"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 2,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#000000",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 0.15,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 150,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
-  }
-
-);
+createParticlesConfig("particles-js", 60, 700, "#ffffff", 4, 0.2, 400);
+createParticlesConfig("particles-js2", 60, 700, "#ffffff", 2, 0.2, 200);
+createParticlesConfig("particles-js-bg-l", 30, 300, "#000000", 2, 0.15, 200);
+createParticlesConfig("particles-js-bg-r", 30, 300, "#000000", 2, 0.15, 200);
