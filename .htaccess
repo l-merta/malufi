@@ -1,5 +1,15 @@
 AddHandler application/x-httpd-php80 .php
 ErrorDocument 404 /404.html
+
+# Přesměrování HTTP na HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Přesměrování www na non-www
+RewriteCond %{HTTP_HOST} ^www\.malufi\.cz [NC]
+RewriteRule ^(.*)$ https://malufi.cz/$1 [L,R=301]
+
 <IfModule mod_deflate.c>
          AddOutputFilterByType DEFLATE application/javascript
          AddOutputFilterByType DEFLATE application/rss+xml
