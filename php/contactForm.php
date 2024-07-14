@@ -42,7 +42,7 @@ try {
     $mail->CharSet    = 'UTF-8';                              // Set charset to UTF-8
 
     // Recipients
-    $mail->setFrom($email, 'MALUFI zákazník');
+    $mail->setFrom($_ENV['MAIL_TO'], 'MALUFI zákazník');
     $mail->addAddress($_ENV['MAIL_TO'], 'Recipient');
 
     // Content
