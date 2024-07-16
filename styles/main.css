@@ -771,7 +771,7 @@ main .aCont a:hover {
 }
 .cenik .cont {
   width: 100%;
-  padding-bottom: 15em;
+  padding-bottom: 8em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -873,6 +873,83 @@ main .aCont a:hover {
   box-shadow: 0px 0px 30px 0px rgba(63, 131, 209, 0.8);
 }
 
+/* FAQ */
+.faq .cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+.faq .cont .otazka .main {
+  background-color: white;
+  width: 45em;
+  max-width: 95vw;
+  padding: 1.5em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 1em;
+  position: relative;
+  z-index: 1 !important;
+  transition: all 0.12s;
+  cursor: pointer;
+}
+.faq .cont .otazka .main .text {
+  height: -moz-fit-content;
+  height: fit-content;
+  font: 500 1.2em var(--f1);
+}
+.faq .cont .otazka .main .icon {
+  opacity: 0.4;
+  font: 100 2em var(--f1);
+  height: 1em;
+  margin-top: -0.3em;
+  padding-left: 1em;
+  transform: rotate(0deg);
+  pointer-events: none;
+  transition: all 0.12s;
+}
+.faq .cont .otazka .main .icon::before {
+  content: "+";
+}
+.faq .cont .otazka .main:hover .icon {
+  opacity: 1;
+}
+.faq .cont .otazka .ans {
+  background-color: white;
+  opacity: 0;
+  font: 400 1em var(--f1);
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 1em;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -2em;
+  margin-bottom: -2em;
+  padding: 1em 2em;
+  padding-top: 3em;
+  position: relative;
+  z-index: 0;
+  transition: all 0.12s;
+}
+.faq .cont .otazka-open .main {
+  border-bottom-color: rgba(201, 201, 201, 0.5);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.faq .cont .otazka-open .main .icon::before {
+  content: "-";
+}
+.faq .cont .otazka-open .ans {
+  opacity: 1;
+  height: 10em;
+  margin-bottom: 0;
+}
+
 /* kontakt */
 .kontakt {
   background: rgb(22, 44, 54);
@@ -880,6 +957,7 @@ main .aCont a:hover {
   width: 100%;
   height: calc(100vh - var(--fh));
   min-height: var(--kontakt-mh);
+  margin-top: 10em;
   position: relative;
   display: flex;
   flex-direction: column;

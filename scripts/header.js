@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const umime = document.querySelector(".umime");
   //const kontakt_mini = document.querySelector('.kontakt-mini');
   const kontakt = document.querySelector(".kontakt");
+  window.kontakt = kontakt;
   //let firstWhite = calculateFirstWhite(main);
   let colorChange = [
     {
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       height: calculateColorChange(kontakt.offsetTop) + kontakt.offsetHeight,
     },
   ];
+  window.colorChange = colorChange;
 
   window.addEventListener("scroll", () => {
     //handleScroll(header, firstWhite);
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //element.height - usek úsek ze spod - polovina header
     return mainElement - 3 * 16 - 0; //-100 protože nevim
   }
+  window.calculateColorChange = calculateColorChange;
 
   function handleScroll(headerElement, colorChange) {
     //threshold
