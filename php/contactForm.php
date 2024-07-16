@@ -42,8 +42,8 @@ try {
     $mail->CharSet    = 'UTF-8';                              // Set charset to UTF-8
 
     // Recipients
-    $mail->setFrom($_ENV['MAIL_TO'], 'MALUFI zákazník');
-    $mail->addAddress($_ENV['MAIL_TO'], 'Recipient');
+    $mail->setFrom($email, 'MALUFI zákazník '.$name);
+    $mail->addAddress($_ENV['MAIL_TO'], 'MALUFI');
 
     // Content
     $mail->isHTML(true);
