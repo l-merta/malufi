@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 declare(strict_types=1);
 // Include the PHPMailer and Dotenv libraries
 require 'vendor/autoload.php';
@@ -78,4 +78,4 @@ $inbox = imap_open($hostname, $username, $password) or die('Cannot connect to IM
 //     } catch (Exception $e) {
 //         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}<br>";
 //     }
-// }
+// } -->
