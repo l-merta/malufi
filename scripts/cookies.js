@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to accept cookies
   window.zapnoutCookie = function () {
     setCookie("userConsent", "true", 365);
+    turnOnAnalytics();
   };
 
   // Check if user has already given consent
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cookieCheckbox) {
       cookieCheckbox.checked = true;
     }
+    turnOnAnalytics();
   } else {
     if (consentBanner) {
       consentBanner.classList = "cookie";
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to accept cookies
   window.acceptCookies = function () {
     setCookie("userConsent", "true", 365);
+    turnOnAnalytics();
     if (cookieCheckbox) {
       cookieCheckbox.checked = true;
     }
@@ -42,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cookieCheckbox) {
       if (cookieCheckbox.checked) {
         setCookie("userConsent", "true", 365);
+        turnOnAnalytics();
       } else {
         setCookie("userConsent", "", -1); // Delete the cookie
       }
@@ -71,3 +75,31 @@ document.addEventListener("DOMContentLoaded", function () {
     return null;
   }
 });
+
+let scriptsAdded = false;
+
+function turnOnAnalytics() {
+  if (scriptsAdded) {
+    //console.log("Google Tag Manager scripts have already been added.");
+    return;
+  }
+
+  // Create the first script element
+  var script1 = document.createElement("script");
+  script1.async = true;
+  script1.src = "https://www.googletagmanager.com/gtag/js?id=G-BK92T8BPL4";
+  document.head.appendChild(script1);
+
+  // Create the second script element with the inline code
+  var script2 = document.createElement("script");
+  script2.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BK92T8BPL4');
+    `;
+  document.head.appendChild(script2);
+
+  scriptsAdded = true;
+  //console.log("Google Tag Manager scripts have been added.");
+}
