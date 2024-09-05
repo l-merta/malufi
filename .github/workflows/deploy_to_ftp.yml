@@ -1,29 +1,29 @@
-name: Deploy to FTP Server
+# name: Deploy to FTP Server
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  ftp-deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   ftp-deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout Code
+#         uses: actions/checkout@v2
 
-      - name: Deploy to FTP Server
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /public_html/
-          exclude: |
-            .git*
-            .github/*
-            README.md
-            *.yml
-            *.yaml
+#       - name: Deploy to FTP Server
+#         uses: SamKirkland/FTP-Deploy-Action@4.2.0
+#         with:
+#           server: ${{ secrets.FTP_SERVER }}
+#           username: ${{ secrets.FTP_USERNAME }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           local-dir: ./
+#           server-dir: /public_html/
+#           exclude: |
+#             .git*
+#             .github/*
+#             README.md
+#             *.yml
+#             *.yaml
